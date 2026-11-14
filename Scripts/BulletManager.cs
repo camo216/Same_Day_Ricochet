@@ -17,18 +17,19 @@ public partial class BulletManager : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Move();
+		Move(delta);
 	}
 
 	/// <summary>
 	/// Calls move on all bullets in the scene.
 	/// </summary>
-	private void Move()
+	/// <param name="delta">delta time</param>
+	private void Move(double delta)
 	{
 		// Calls move on all bullet objects.
 		for (int i = 0; i < bullets.Count; i++)
 		{
-			bullets[i].Move();
+			bullets[i].Move(delta);
 		}
 	}
 

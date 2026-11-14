@@ -5,7 +5,7 @@ public partial class Bullet : CharacterBody2D
 {
 	// Variables
 	private BulletType type = BulletType.None;
-	private Enemy orgin = null;
+	private Enemy origin = null;
 	private BulletManager manager;
 
 	[Export] private Vector2 direction = new Vector2(0,0);
@@ -26,7 +26,7 @@ public partial class Bullet : CharacterBody2D
 	public void Inst(BulletType newType, Enemy creator, Vector2 newDirection, float newSpeed)
 	{
 		type = newType;
-		orgin = creator;
+		origin = creator;
         manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
@@ -35,10 +35,18 @@ public partial class Bullet : CharacterBody2D
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.
 	/// </summary>
-	public void Move()
+	/// <param name="delta">delta time</param>
+	public void Move(double delta)
 	{
-		Velocity = direction.Normalized() * speed;
-		MoveAndSlide();
+		// Determine direction and velocity.
+		if (isDeflected)
+		{
+            direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);  
+        }
+        Velocity = direction.Normalized() * speed;
+
+		// Move the bullet.
+        MoveAndCollide(Velocity * (float)delta);
     }
 
 	/// <summary>
