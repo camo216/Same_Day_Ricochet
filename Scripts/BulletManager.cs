@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 public partial class BulletManager : Node
 {
-	[Export]
-	private PackedScene bulletObject;
+	[Export] private PackedScene bulletObject;
 
 	private List<Bullet> bullets = new List<Bullet>();
 
@@ -18,19 +17,18 @@ public partial class BulletManager : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Move(delta);
+		Move();
 	}
 
 	/// <summary>
 	/// Calls move on all bullets in the scene.
 	/// </summary>
-	/// <param name="delta">Delta time value</param>
-	private void Move(double delta)
+	private void Move()
 	{
 		// Calls move on all bullet objects.
 		for (int i = 0; i < bullets.Count; i++)
 		{
-			bullets[i].Move(delta);
+			bullets[i].Move();
 		}
 	}
 
@@ -42,6 +40,7 @@ public partial class BulletManager : Node
 		// create the bullet
 		var newBullet = bulletObject.Instantiate();
 		AddChild(newBullet);
+		bullets.Add(newBullet as Bullet);
 	}
 
 	/// <summary>
@@ -50,9 +49,7 @@ public partial class BulletManager : Node
 	/// <param name="me">Bullet that is being destroyed</param>
 	public void DestroyBullet(Bullet me)
 	{
-		for (int i = 0; i < bullets.Count; i++)
-		{
-			bullets.Remove(me);
-		}
+		bullets.Remove(me);
+		me.QueueFree();
 	}
 }

@@ -1,6 +1,6 @@
 using Godot;
 using System;
-[Tool]
+//[Tool]
 
 public partial class Player : CharacterBody2D
 {

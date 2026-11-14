@@ -1,16 +1,17 @@
 using Godot;
 using System;
 
-public partial class Bullet : Node
+public partial class Bullet : CharacterBody2D
 {
 	// Variables
-	private BulletType type;
-	private Enemy orgin;
+	private BulletType type = BulletType.None;
+	private Enemy orgin = null;
+	private BulletManager manager;
 
-	private Vector2 dirction;
-	private float speed;
+	[Export] private Vector2 direction = new Vector2(0,0);
+	[Export] private float speed = 0;
 
-	public bool isDeflected;
+	public bool isDeflected = false;
 
 	// Public properties
 	public BulletType Type { get; }
@@ -18,15 +19,23 @@ public partial class Bullet : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		manager = GetParent<BulletManager>();
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	/// <summary>
+	/// Moves the bullet along it's current velocity path.
+	/// </summary>
+	public void Move()
 	{
-	}
+		Velocity = direction.Normalized() * speed;
+		MoveAndSlide();
+    }
 
-	public void Move(double delta)
+	/// <summary>
+	/// Calls the proper methods to destroy the bullet.
+	/// </summary>
+	public void DestroySelf()
 	{
-
+		manager.DestroyBullet(this);
 	}
 }
