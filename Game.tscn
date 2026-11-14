@@ -4,10 +4,16 @@
 [ext_resource type="Script" uid="uid://ijti3263jqpc" path="res://Scripts/BulletManager.cs" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="3_u44n3"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
+radius = 18.110771
+
 [node name="Node2D" type="Node2D" unique_id=1102391149]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1523909729]
 script = ExtResource("1_wbfu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=686054766]
+shape = SubResource("CircleShape2D_s2kof")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023345454]
 
