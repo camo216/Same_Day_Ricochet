@@ -16,11 +16,21 @@ public partial class Bullet : CharacterBody2D
 	// Public properties
 	public BulletType Type { get; }
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	/// <summary>
+	/// Called when creating a bullet to set the types and parameters.
+	/// </summary>
+	/// <param name="newType">Type of bullet</param>
+	/// <param name="creator">enemy that created the bullet</param>
+	/// <param name="newDirection">direction vector of the bullet</param>
+	/// <param name="newSpeed">speed of the bullet</param>
+	public void Inst(BulletType newType, Enemy creator, Vector2 newDirection, float newSpeed)
 	{
-		manager = GetParent<BulletManager>();
-	}
+		type = newType;
+		orgin = creator;
+        manager = GetParent<BulletManager>();
+		direction = newDirection;
+		speed = newSpeed;
+    }
 
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.
