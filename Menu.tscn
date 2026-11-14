@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://cm36kjur0wp3t"]
 
+[ext_resource type="Script" uid="uid://b5smffep3unwy" path="res://Scripts/MainMenu.cs" id="1_5yleq"]
+[ext_resource type="Script" uid="uid://5wftywwva4c1" path="res://Scripts/StartButton.cs" id="1_uubjt"]
+
 [node name="Menu" type="Control" unique_id=1446260374]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5yleq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1746947935]
 custom_minimum_size = Vector2(0, 100)
@@ -29,3 +33,4 @@ layout_mode = 2
 action_mode = 0
 text = "
 "
+script = ExtResource("1_uubjt")

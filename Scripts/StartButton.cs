@@ -21,9 +21,4 @@ public partial class StartButton : Button
     {
         DrawRect(rect, Color.Color8(0, 255, 255, 90));
     }
-
-    private void ButtonPressed()
-    {
-        GD.Print("Hello world!");
-    }
 }

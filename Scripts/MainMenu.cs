@@ -2,7 +2,7 @@ using Godot;
 using System;
 [Tool]
 
-public partial class MenuBackground : Control
+public partial class MainMenu : Control
 {
 	private Rect2 rect = new Rect2(0,0,1200,900);
 
