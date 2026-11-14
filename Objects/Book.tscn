@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dgy3dkuvpi4ym"]
+
+[ext_resource type="Script" uid="uid://bh4x6yxl7lr02" path="res://Scripts/Book.cs" id="1_hyjei"]
+
+[node name="Node2D" type="Node2D" unique_id=2114262059]
+
+[node name="Book" type="CharacterBody2D" parent="." unique_id=923619093]
+script = ExtResource("1_hyjei")

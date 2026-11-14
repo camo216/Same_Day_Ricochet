@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://hscddh7257um"]
+
+[ext_resource type="Script" uid="uid://cqnqb01olixhj" path="res://Scripts/Amulet.cs" id="1_pmdeo"]
+
+[node name="Node2D" type="Node2D" unique_id=2027895637]
+
+[node name="Amulet" type="CharacterBody2D" parent="." unique_id=1627586619]
+script = ExtResource("1_pmdeo")
