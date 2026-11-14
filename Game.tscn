@@ -17,6 +17,6 @@ shape = SubResource("CircleShape2D_s2kof")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023345454]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1301194487]
+[node name="BulletManager" type="Node2D" parent="." unique_id=1301194487]
 script = ExtResource("2_xkndl")
 bulletObject = ExtResource("3_u44n3")
