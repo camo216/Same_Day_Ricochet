@@ -14,5 +14,5 @@ public abstract class Enemy : Node
 	{
 	}
 
-	abstract void Move();
+	public abstract void Move();
 }
