@@ -24,4 +24,9 @@ public partial class Bullet : Node
 	public override void _Process(double delta)
 	{
 	}
+
+	public void Move(double delta)
+	{
+
+	}
 }

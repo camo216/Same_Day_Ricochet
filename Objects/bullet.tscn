@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bwwr3lkpi0b8x"]
+
+[ext_resource type="Script" uid="uid://dydjifrptgceg" path="res://Scripts/Bullet.cs" id="1_ktj6t"]
+
+[node name="Bullet" type="CharacterBody2D" unique_id=321020889]
+script = ExtResource("1_ktj6t")
