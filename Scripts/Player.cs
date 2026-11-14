@@ -1,6 +1,6 @@
 using Godot;
 using System;
-[Tool]
+
 
 public partial class Player : CharacterBody2D
 {
@@ -18,7 +18,7 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateVelocity(double delta)
 	{
-		Velocity = Input.GetVector("left", "right", "up", "down") * speed * (float)delta * 100;
+		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
 	}
 
 	private void UpdateCooldown(double delta)
