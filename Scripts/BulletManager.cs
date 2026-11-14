@@ -11,8 +11,15 @@ public partial class BulletManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		CreateBullet(BulletType.None, new Spider(), new Vector2(2,1), 2);
-	}
+		CreateBullet(BulletType.None, new Spider(), new Vector2(2, 1), 2);
+        CreateBullet(BulletType.None, new Spider(), new Vector2(1, 1), 2);
+
+        CreateBullet(BulletType.None, new Spider(), new Vector2(2, 4), 3);
+
+        CreateBullet(BulletType.None, new Spider(), new Vector2(2, 2), 4);
+
+        CreateBullet(BulletType.None, new Spider(), new Vector2(7, 1), 5);
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

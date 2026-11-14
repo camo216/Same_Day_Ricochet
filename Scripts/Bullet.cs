@@ -11,7 +11,7 @@ public partial class Bullet : CharacterBody2D
 	[Export] private Vector2 direction = new Vector2(0,0);
 	[Export] private float speed = 0;
 
-	public bool isDeflected = false;
+	[Export] public bool isDeflected = false;
 
 	// Public properties
 	public BulletType Type { get; }
