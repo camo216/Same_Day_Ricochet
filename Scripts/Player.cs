@@ -56,13 +56,6 @@ public partial class Player : CharacterBody2D
         }
     }
 
-    //public override void _Input(InputEvent @event)
-    //{
-    //    if (@event is )
-    //    {
-    //    }
-    //}
-
     private void UpdateCooldown(double delta)
     {
 		cooldown -= delta;
@@ -105,6 +98,23 @@ public partial class Player : CharacterBody2D
         //        cooldownGreen = cooldownTime;
         //    }
         //}
+    }
+
+    public void takeDamage() 
+    {
+        health -= 1;
+        if (health == 0)
+        { 
+            // fuckin die
+        }
+    }
+
+    public void heal() 
+    {
+        if (health != 5)
+        {
+            health += 1;
+        }
     }
 
 	// Called when the node enters the scene tree for the first time.
