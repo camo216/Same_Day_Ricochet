@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="3_u44n3"]
 
 [node name="Node2D" type="Node2D" unique_id=1102391149]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1523909729]
 script = ExtResource("1_wbfu4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2023345454]
