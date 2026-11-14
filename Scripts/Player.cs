@@ -18,11 +18,8 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateVelocity()
 	{
-<<<<<<< Updated upstream
 		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
-=======
-		Velocity = Input.GetVector("left", "right", "up", "down") * speed ;
->>>>>>> Stashed changes
+
 	}
 
 	private void UpdateCooldown(double delta)
