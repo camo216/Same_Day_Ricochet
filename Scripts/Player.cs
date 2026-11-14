@@ -11,14 +11,19 @@ public partial class Player : CharacterBody2D
     private const double cooldownTime = 0.75;
     private const double parryTime = 0.5;
     private double cooldown = 1;
-	//private double cooldownRed = 0.5;
-	//private double cooldownGreen = 0.5;
-	//private double cooldownBlue = 0.5;
+    //private double cooldownRed = 0.5;
+    //private double cooldownGreen = 0.5;
+    //private double cooldownBlue = 0.5;
 
-	private Color parryColor = Color.Color8(0, 0, 0, 0);
+
+    private static Color defaultColor = Color.Color8(0, 255, 255, 90);
+    private Color currentColor = defaultColor;
 	private bool parryRed;
 	private bool parryGreen;
 	private bool parryBlue;
+
+	private const int maxHealth = 5;
+	private int health = 5;
 
 	private void UpdateVelocity()
 	{
@@ -26,7 +31,39 @@ public partial class Player : CharacterBody2D
 
 	}
 
-	private void UpdateCooldown(double delta)
+    private void CheckDeflect()
+    {
+        if (Input.IsActionJustPressed("parry_red"))
+        {
+            parryRed = true;
+            onCooldown = true;
+            currentColor = Color.Color8(255, 0, 0, 90);
+        }
+
+        else if (Input.IsActionJustPressed("parry_green"))
+        {
+            parryGreen = true;
+            onCooldown = true;
+            currentColor = Color.Color8(0, 255, 0, 90);
+        }
+
+
+        else if (Input.IsActionJustPressed("parry_blue"))
+        {
+            parryBlue = true;
+            onCooldown = true;
+            currentColor = Color.Color8(0, 0, 255, 90);
+        }
+    }
+
+    //public override void _Input(InputEvent @event)
+    //{
+    //    if (@event is )
+    //    {
+    //    }
+    //}
+
+    private void UpdateCooldown(double delta)
     {
 		cooldown -= delta;
         if (cooldown <= 0)
@@ -39,7 +76,7 @@ public partial class Player : CharacterBody2D
             parryRed = false;
             parryGreen = false;
             parryBlue = false;
-            parryColor = Color.Color8(0, 0, 0, 0);
+            currentColor = defaultColor;
         }
         //if (parryRed)
         //{
@@ -80,27 +117,7 @@ public partial class Player : CharacterBody2D
 	{
 		if (!onCooldown)
 		{
-			if (Input.IsActionPressed("parry_red"))
-			{
-				parryRed = true;
-				onCooldown = true;
-                parryColor = Color.Color8(255, 0, 0, 200);
-			}
-
-			else if (Input.IsActionPressed("parry_green"))
-			{
-				parryGreen = true;
-                onCooldown = true;
-                parryColor = Color.Color8(0, 255, 0, 200);
-			}
-
-
-			else if (Input.IsActionPressed("parry_blue"))
-			{
-				parryBlue = true;
-                onCooldown = true;
-                parryColor = Color.Color8(0, 0, 255, 200);
-			}
+            CheckDeflect();
 		}
 
 		if (onCooldown)
@@ -119,6 +136,6 @@ public partial class Player : CharacterBody2D
 		// Your draw commands here.
 		
 		DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, true);
-		DrawCircle(drawVector, 20, parryColor, true);
+		DrawCircle(drawVector, 20, currentColor, true);
 	}
 }
