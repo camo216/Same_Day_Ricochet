@@ -9,7 +9,7 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateVelocity()
 	{
-		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
+		Velocity = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down") * speed;
 	}
 
 	// Called when the node enters the scene tree for the first time.
