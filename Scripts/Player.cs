@@ -15,10 +15,15 @@ public partial class Player : CharacterBody2D
 	//private double cooldownGreen = 0.5;
 	//private double cooldownBlue = 0.5;
 
-	private Color parryColor = Color.Color8(0, 0, 0, 0);
+    private static Color defaultColor = Color.Color8(0, 255, 255, 90);
+    private Color currentColor = defaultColor;
 	private bool parryRed;
 	private bool parryGreen;
 	private bool parryBlue;
+
+    private const int maxHealth = 5;
+    private int health = maxHealth;
+
 
 	private void UpdateVelocity()
 	{
@@ -39,7 +44,7 @@ public partial class Player : CharacterBody2D
             parryRed = false;
             parryGreen = false;
             parryBlue = false;
-            parryColor = Color.Color8(0, 0, 0, 0);
+            currentColor = defaultColor;
         }
         //if (parryRed)
         //{
@@ -70,6 +75,23 @@ public partial class Player : CharacterBody2D
         //}
     }
 
+    public void takeDamage() 
+    {
+        health -= 1;
+        if (health == 0)
+        { 
+            // fuckin die
+        }
+    }
+
+    public void heal() 
+    {
+        if (health != 5)
+        {
+            health += 1;
+        }
+    }
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -84,14 +106,14 @@ public partial class Player : CharacterBody2D
 			{
 				parryRed = true;
 				onCooldown = true;
-                parryColor = Color.Color8(255, 0, 0, 200);
+                currentColor = Color.Color8(255, 0, 0, 90);
 			}
 
 			else if (Input.IsActionPressed("parry_green"))
 			{
 				parryGreen = true;
                 onCooldown = true;
-                parryColor = Color.Color8(0, 255, 0, 200);
+                currentColor = Color.Color8(0, 255, 0, 90);
 			}
 
 
@@ -99,7 +121,7 @@ public partial class Player : CharacterBody2D
 			{
 				parryBlue = true;
                 onCooldown = true;
-                parryColor = Color.Color8(0, 0, 255, 200);
+                currentColor = Color.Color8(0, 0, 255, 90);
 			}
 		}
 
@@ -119,6 +141,6 @@ public partial class Player : CharacterBody2D
 		// Your draw commands here.
 		
 		DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, false);
-		DrawCircle(drawVector, 20, parryColor, true);
+		DrawCircle(drawVector, 20, currentColor, true);
 	}
 }
