@@ -16,9 +16,9 @@ public partial class Player : CharacterBody2D
 	private bool parryGreen;
 	private bool parryBlue;
 
-	private void UpdateVelocity()
+	private void UpdateVelocity(double delta)
 	{
-		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
+		Velocity = Input.GetVector("left", "right", "up", "down") * speed * (float)delta * 100;
 	}
 
 	private void UpdateCooldown(double delta)
@@ -95,7 +95,7 @@ public partial class Player : CharacterBody2D
 		}
 		UpdateCooldown(delta);
 
-		UpdateVelocity();
+		UpdateVelocity(delta);
 		MoveAndSlide();
 
 		QueueRedraw();
