@@ -11,36 +11,40 @@ public partial class BulletManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		CreateBullet();
+		CreateBullet(BulletType.None, new Spider(), new Vector2(2,1), 2);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Move();
+		Move(delta);
 	}
 
 	/// <summary>
 	/// Calls move on all bullets in the scene.
 	/// </summary>
-	private void Move()
+	/// <param name="delta">delta time</param>
+	private void Move(double delta)
 	{
 		// Calls move on all bullet objects.
 		for (int i = 0; i < bullets.Count; i++)
 		{
-			bullets[i].Move();
+			bullets[i].Move(delta);
 		}
 	}
 
 	/// <summary>
 	/// Creates a new bullet with the provided info and add it to the bullet list.
 	/// </summary>
-	public void CreateBullet()
+	public void CreateBullet(BulletType type, Enemy me, Vector2 direction, float speed)
 	{
 		// create the bullet
 		var newBullet = bulletObject.Instantiate();
 		AddChild(newBullet);
 		bullets.Add(newBullet as Bullet);
+
+		// set the bullets parameters.
+		bullets[bullets.Count - 1].Inst(type, me, direction, speed);
 	}
 
 	/// <summary>
