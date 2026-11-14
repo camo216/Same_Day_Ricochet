@@ -18,7 +18,7 @@ public partial class Player : CharacterBody2D
 
 	private void UpdateVelocity()
 	{
-		Velocity = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down") * speed;
+		Velocity = Input.GetVector("left", "right", "up", " down") * speed;
 	}
 
 	private void UpdateCooldown(double delta)
