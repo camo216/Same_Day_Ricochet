@@ -118,7 +118,7 @@ public partial class Player : CharacterBody2D
 	{
 		// Your draw commands here.
 		
-		DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, true);
+		DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, false);
 		DrawCircle(drawVector, 20, parryColor, true);
 	}
 }
