@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Spider : Enemy
+public partial class Spider : Enemy
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -13,7 +13,7 @@ public class Spider : Enemy
 	{
 	}
 
-	private override void Move()
+	public override void Move()
 	{
 
 	}
