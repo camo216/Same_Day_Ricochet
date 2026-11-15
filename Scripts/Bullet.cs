@@ -74,7 +74,12 @@ public partial class Bullet : Area2D
 			if (isDeflected)
 			{
 				e.TakeDamage();
+				DestroySelf();
 			}
+		}
+		else
+		{
+			DestroySelf();
 		}
 	}
 

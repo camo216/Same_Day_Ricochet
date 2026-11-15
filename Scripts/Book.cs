@@ -3,7 +3,6 @@ using System;
 
 public partial class Book : Enemy
 {
-    private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
     public override void Inst(Node2D newPlayer, BulletManager bullet)

@@ -10,6 +10,7 @@ public abstract partial class Enemy : CharacterBody2D
 	protected Node2D player;
     protected BulletManager bulletManager;
     protected Random rng = new Random();
+    protected EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -48,5 +49,9 @@ public abstract partial class Enemy : CharacterBody2D
     public void TakeDamage()
     {
         health--;
+        if (health <= 0)
+        {
+            manager.DestroyEnemy(this);
+        }
     }
 }

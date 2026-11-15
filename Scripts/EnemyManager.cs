@@ -25,7 +25,7 @@ public partial class EnemyManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		CreateEnemy("Spider", new Vector2(100, 0));
+		CreateEnemy("Sword", new Vector2(300, 0));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
