@@ -79,11 +79,12 @@ script = ExtResource("2_4tm88")
 shape = SubResource("RectangleShape2D_wccwa")
 debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
 
-[node name="Door" type="CharacterBody2D" parent="." unique_id=1320571026]
+[node name="Door" type="CharacterBody2D" parent="." unique_id=1320571026 node_paths=PackedStringArray("enemyManager")]
 position = Vector2(0, -460)
 rotation = 1.5707964
 scale = Vector2(1, 10)
 script = ExtResource("3_4tm88")
+enemyManager = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=8296582]
 shape = SubResource("RectangleShape2D_wccwa")
