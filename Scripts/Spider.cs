@@ -25,6 +25,7 @@ public partial class Spider : Enemy
     public override void Inst(Node2D newPlayer, BulletManager bullet)
 	{
         manager = GetParent<EnemyManager>();
+        type = "Spider";
         bulletManager = bullet;
         player = newPlayer;
         health = 1;

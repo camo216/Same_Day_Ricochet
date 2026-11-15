@@ -4,6 +4,7 @@ using System;
 public abstract partial class Enemy : CharacterBody2D
 {
 	[Export] protected int health;
+    public string type;
 	protected Vector2 direction;
 	protected float speed;
 	protected Node2D player;
