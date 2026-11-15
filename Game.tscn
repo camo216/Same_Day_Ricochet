@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cebuxet7oyym1" path="res://Scripts/Player.cs" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://ijti3263jqpc" path="res://Scripts/BulletManager.cs" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="3_u44n3"]
+[ext_resource type="Script" uid="uid://ct6f6xhxqm2pk" path="res://Scripts/EnemyManager.cs" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://bt8urbblcipr4" path="res://Objects/Spider.tscn" id="5_t88pq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 radius = 18.110771
@@ -10,6 +12,7 @@ radius = 18.110771
 [node name="Node2D" type="Node2D" unique_id=1102391149]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1523909729 groups=["Persist"]]
+collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_wbfu4")
 
@@ -21,3 +24,7 @@ shape = SubResource("CircleShape2D_s2kof")
 [node name="BulletManager" type="Node2D" parent="." unique_id=1301194487]
 script = ExtResource("2_xkndl")
 bulletObject = ExtResource("3_u44n3")
+
+[node name="EnemyManager" type="Node2D" parent="." unique_id=34573757]
+script = ExtResource("4_sb48q")
+spiderObject = ExtResource("5_t88pq")

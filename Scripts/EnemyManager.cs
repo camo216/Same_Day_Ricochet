@@ -13,6 +13,7 @@ public partial class EnemyManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		CreateEnemy("Spider", new Vector2(100, 0));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,6 +36,18 @@ public partial class EnemyManager : Node
     }
 
 	/// <summary>
+	/// Attempts to have all enemies perform an action
+	/// </summary>
+	/// <param name="delta">delta time</param>
+	private void EnemyAction(double delta)
+	{
+		for (int i = 0; i < enemies.Count; i++)
+		{
+			enemies[i].DoAction(delta);
+		}
+	}
+
+	/// <summary>
 	/// Handles the creation of Enemies
 	/// </summary>
 	/// <param name="type">Type of enemy</param>
@@ -50,7 +63,9 @@ public partial class EnemyManager : Node
                 AddChild(newEnemy);
 				enemies.Add(newEnemy as Spider);
 
-				enemies[enemies.Count - 1].Position = position;
+				enemies[enemies.Count - 1].Inst();
+
+                enemies[enemies.Count - 1].Position = position;
 				break;
 		}
 	}
