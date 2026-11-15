@@ -9,7 +9,8 @@ radius = 18.110771
 
 [node name="Node2D" type="Node2D" unique_id=1102391149]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1523909729]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1523909729 groups=["Persist"]]
+collision_mask = 13
 script = ExtResource("1_wbfu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=686054766]

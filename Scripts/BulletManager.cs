@@ -11,14 +11,14 @@ public partial class BulletManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		CreateBullet(BulletType.None, new Spider(), new Vector2(2, 1), 2);
-        CreateBullet(BulletType.None, new Spider(), new Vector2(1, 1), 2);
+		CreateBullet(BulletType.Web, new Spider(), new Vector2(2, 1), 2);
+        CreateBullet(BulletType.Web, new Spider(), new Vector2(1, 1), 2);
 
-        CreateBullet(BulletType.None, new Spider(), new Vector2(2, 4), 3);
+        CreateBullet(BulletType.Web, new Spider(), new Vector2(2, 4), 3);
 
-        CreateBullet(BulletType.None, new Spider(), new Vector2(2, 2), 4);
+        CreateBullet(BulletType.Web, new Spider(), new Vector2(2, 2), 4);
 
-        CreateBullet(BulletType.None, new Spider(), new Vector2(7, 1), 5);
+        CreateBullet(BulletType.Web, new Spider(), new Vector2(7, 1), 5);
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,7 +46,7 @@ public partial class BulletManager : Node
 	public void CreateBullet(BulletType type, Enemy me, Vector2 direction, float speed)
 	{
 		// create the bullet
-		var newBullet = bulletObject.Instantiate();
+		Node newBullet = bulletObject.Instantiate();
 		AddChild(newBullet);
 		bullets.Add(newBullet as Bullet);
 

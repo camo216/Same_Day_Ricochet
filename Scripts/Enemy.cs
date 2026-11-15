@@ -16,5 +16,5 @@ public abstract partial class Enemy : CharacterBody2D
 	{
 	}
 
-	public abstract void Move();
+	public abstract void Move(double delta);
 }

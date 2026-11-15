@@ -11,24 +11,29 @@ public partial class Player : CharacterBody2D
     private const double cooldownTime = 0.75;
     private const double parryTime = 0.5;
     private double cooldown = 1;
-	//private double cooldownRed = 0.5;
-	//private double cooldownGreen = 0.5;
-	//private double cooldownBlue = 0.5;
+    //private double cooldownRed = 0.5;
+    //private double cooldownGreen = 0.5;
+    //private double cooldownBlue = 0.5;
+
+    private bool isWebbed = false;
+    private const float webCooldown = 1;
+    private float webTimer = webCooldown;
 
     private static Color defaultColor = Color.Color8(0, 255, 255, 90);
     private Color currentColor = defaultColor;
-	private bool parryRed;
-	private bool parryGreen;
-	private bool parryBlue;
+    private BulletType parry = BulletType.None;
 
     private const int maxHealth = 5;
-    private int health = maxHealth;
+    [Export] private int health = maxHealth;
 
 
 	private void UpdateVelocity()
 	{
 		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
-
+        if (isWebbed)
+        {
+            Velocity = Velocity * .75f;
+        }
 	}
 
 	private void UpdateCooldown(double delta)
@@ -41,9 +46,7 @@ public partial class Player : CharacterBody2D
         }
         else if (cooldown - parryTime <= 0)
         {
-            parryRed = false;
-            parryGreen = false;
-            parryBlue = false;
+            parry = BulletType.None;
             currentColor = defaultColor;
         }
         //if (parryRed)
@@ -75,10 +78,19 @@ public partial class Player : CharacterBody2D
         //}
     }
 
+    private void UpdateWebCooldown(double delta)
+    {
+        webTimer -= (float)delta;
+        if (webTimer <= 0)
+        {
+            isWebbed = false;
+        }
+    }
+
     public void takeDamage() 
     {
         health -= 1;
-        if (health == 0)
+        if (health <= 0)
         { 
             // fuckin die
         }
@@ -86,7 +98,7 @@ public partial class Player : CharacterBody2D
 
     public void heal() 
     {
-        if (health != 5)
+        if (health < 5)
         {
             health += 1;
         }
@@ -104,14 +116,14 @@ public partial class Player : CharacterBody2D
 		{
 			if (Input.IsActionPressed("parry_red"))
 			{
-				parryRed = true;
+                parry = BulletType.Red;
 				onCooldown = true;
                 currentColor = Color.Color8(255, 0, 0, 90);
 			}
 
 			else if (Input.IsActionPressed("parry_green"))
 			{
-				parryGreen = true;
+                parry = BulletType.Green;
                 onCooldown = true;
                 currentColor = Color.Color8(0, 255, 0, 90);
 			}
@@ -119,7 +131,7 @@ public partial class Player : CharacterBody2D
 
 			else if (Input.IsActionPressed("parry_blue"))
 			{
-				parryBlue = true;
+                parry = BulletType.Blue;
                 onCooldown = true;
                 currentColor = Color.Color8(0, 0, 255, 90);
 			}
@@ -130,11 +142,56 @@ public partial class Player : CharacterBody2D
 			UpdateCooldown(delta);
 		}
 
+        // handles cooldown for being webbed.
+        if (isWebbed)
+        {
+            UpdateWebCooldown(delta);
+        }
+
 		UpdateVelocity();
 		MoveAndSlide();
+        // Calls a method to handle each collision that happened.
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            HandleCollisions(collision);
+        }
 
-		QueueRedraw();
+        QueueRedraw();
 	}
+
+    /// <summary>
+    /// Handles all collisions with the player
+    /// </summary>
+    /// <param name="collision">Collision with player</param>
+    private void HandleCollisions(KinematicCollision2D collision)
+    {
+        // Bullet collisions
+        if (collision.GetCollider() is Bullet bullet)
+        {
+            
+            // Does the player's parry match the bullet's type?
+            if (parry == bullet.Type)
+            {
+                bullet.isDeflected = true;
+            }
+
+            // Webs slow down the player
+            else if (bullet.Type == BulletType.Web)
+            {
+                isWebbed = true;
+                webTimer = webCooldown;
+                bullet.DestroySelf();
+            }
+
+            // Player takes damage if not parried.
+            else if (!bullet.isDeflected)
+            {
+                takeDamage();
+                bullet.DestroySelf();
+            }
+        }
+    }
 
 	public override void _Draw()
 	{

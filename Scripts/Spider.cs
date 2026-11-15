@@ -18,7 +18,7 @@ public partial class Spider : Enemy
 	{
 	}
 
-	public override void Move()
+	public override void Move(double delta)
 	{
         Velocity = direction.Normalized() * speed;
         MoveAndSlide();

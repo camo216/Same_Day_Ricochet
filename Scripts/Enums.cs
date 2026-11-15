@@ -6,5 +6,6 @@ public enum BulletType
     None,
     Blue,
     Red,
-    Yellow
+    Green,
+    Web
 }

@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dydjifrptgceg" path="res://Scripts/Bullet.cs" id="1_ktj6t"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3xi1"]
+
 [node name="Bullet" type="CharacterBody2D" unique_id=321020889]
 collision_layer = 8
+collision_mask = 7
 script = ExtResource("1_ktj6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=114222508]
+shape = SubResource("CircleShape2D_s3xi1")

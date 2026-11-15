@@ -14,7 +14,7 @@ public partial class Bullet : CharacterBody2D
 	[Export] public bool isDeflected = false;
 
 	// Public properties
-	public BulletType Type { get; }
+	public BulletType Type { get => type; }
 
 	/// <summary>
 	/// Called when creating a bullet to set the types and parameters.

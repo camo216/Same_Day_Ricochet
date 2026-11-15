@@ -21,7 +21,7 @@ public partial class Amulet : Enemy
 		
 	}
 
-    public override void Move()
+    public override void Move(double delta)
     {
         Velocity = direction.Normalized() * speed;
         MoveAndSlide();
