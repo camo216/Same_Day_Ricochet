@@ -10,6 +10,12 @@ public partial class EnemyManager : Node
 	// Enemy list
 	private List<Enemy> enemies = new List<Enemy>();
 
+	// Player reference
+	[Export] private Node2D player;
+
+	// Bullet manager reference
+	[Export] private BulletManager bulletManager;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -20,6 +26,7 @@ public partial class EnemyManager : Node
 	public override void _Process(double delta)
 	{
 		Move(delta);
+		EnemyAction(delta);
 	}
 
 	/// <summary>
@@ -55,15 +62,15 @@ public partial class EnemyManager : Node
 	public void CreateEnemy(string type, Vector2 position)
 	{
 		// Determine enemy type
-		Node newEnemy = null;
+		Node newEnemy;
 		switch (type)
 		{
 			case "Spider":
 				newEnemy = spiderObject.Instantiate();
                 AddChild(newEnemy);
-				enemies.Add(newEnemy as Spider);
+                enemies.Add(newEnemy as Spider);
 
-				enemies[enemies.Count - 1].Inst();
+				enemies[enemies.Count - 1].Inst(player, bulletManager);
 
                 enemies[enemies.Count - 1].Position = position;
 				break;

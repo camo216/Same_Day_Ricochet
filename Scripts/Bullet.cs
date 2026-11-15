@@ -3,8 +3,9 @@ using System;
 
 public partial class Bullet : CharacterBody2D
 {
-	// Variables
-	private BulletType type = BulletType.None;
+    // Variables
+    private Vector2 drawVector = new Vector2(0, 0);
+    private BulletType type = BulletType.None;
 	private Enemy origin = null;
 	private BulletManager manager;
 
@@ -55,5 +56,17 @@ public partial class Bullet : CharacterBody2D
 	public void DestroySelf()
 	{
 		manager.DestroyBullet(this);
+	}
+
+	public override void _Draw()
+	{
+		if (origin == null)
+		{
+			GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
+		}
+		else if (origin.Name == "Spider")
+		{
+			DrawCircle(drawVector, 2, Color.Color8(255, 255, 255, 255));
+		}
 	}
 }

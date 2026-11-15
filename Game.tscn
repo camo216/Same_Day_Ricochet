@@ -25,6 +25,8 @@ shape = SubResource("CircleShape2D_s2kof")
 script = ExtResource("2_xkndl")
 bulletObject = ExtResource("3_u44n3")
 
-[node name="EnemyManager" type="Node2D" parent="." unique_id=34573757]
+[node name="EnemyManager" type="Node2D" parent="." unique_id=34573757 node_paths=PackedStringArray("player", "bulletManager")]
 script = ExtResource("4_sb48q")
 spiderObject = ExtResource("5_t88pq")
+player = NodePath("../Player")
+bulletManager = NodePath("../BulletManager")

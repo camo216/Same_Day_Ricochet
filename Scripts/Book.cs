@@ -6,9 +6,11 @@ public partial class Book : Enemy
     private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
-    public override void Inst()
+    public override void Inst(Node2D newPlayer, BulletManager bullet)
     {
         manager = GetParent<EnemyManager>();
+        bulletManager = bullet;
+        player = newPlayer;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
