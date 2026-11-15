@@ -6,12 +6,9 @@
 [ext_resource type="Script" uid="uid://ct6f6xhxqm2pk" path="res://Scripts/EnemyManager.cs" id="4_sb48q"]
 [ext_resource type="PackedScene" uid="uid://blso66kjqilbk" path="res://Objects/blue_level.tscn" id="5_joorw"]
 [ext_resource type="PackedScene" uid="uid://bt8urbblcipr4" path="res://Objects/Spider.tscn" id="5_t88pq"]
-[ext_resource type="PackedScene" uid="uid://c7vw55sbj6a2j" path="res://Objects/Sword.tscn" id="6_gwjdr"]
 [ext_resource type="PackedScene" uid="uid://c8b6hxadxo1sn" path="res://Objects/green_level.tscn" id="6_r0x5m"]
 [ext_resource type="PackedScene" uid="uid://c4r66r3jewpc3" path="res://Objects/red_level.tscn" id="7_2vekm"]
 [ext_resource type="PackedScene" uid="uid://b5p8gpanr831w" path="res://Objects/wizard_level.tscn" id="7_3mrqo"]
-[ext_resource type="PackedScene" uid="uid://dgy3dkuvpi4ym" path="res://Objects/Book.tscn" id="7_lvtmh"]
-[ext_resource type="PackedScene" uid="uid://hscddh7257um" path="res://Objects/Amulet.tscn" id="8_yyih5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 radius = 18.110771
@@ -34,9 +31,6 @@ bulletObject = ExtResource("3_u44n3")
 [node name="EnemyManager" type="Node2D" parent="." unique_id=1734305238 node_paths=PackedStringArray("player", "bulletManager")]
 script = ExtResource("4_sb48q")
 spiderObject = ExtResource("5_t88pq")
-swordObject = ExtResource("6_gwjdr")
-bookObject = ExtResource("7_lvtmh")
-amuletObject = ExtResource("8_yyih5")
 player = NodePath("../Player")
 bulletManager = NodePath("../BulletManager")
 

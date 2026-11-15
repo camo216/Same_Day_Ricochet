@@ -4,9 +4,13 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
+    private Random rng = new Random();
+
     private Vector2 drawVector = new Vector2(0, 0);
     private const int speed = 500;
     private AudioStreamPlayer deathSound;
+    private AudioStreamPlayer hurtSound;
+    private AudioStream[] hurtSounds;
     
     private bool onCooldown = false;
     private const double cooldownTime = 0.75;
@@ -88,7 +92,7 @@ public partial class Player : CharacterBody2D
         }
     }
 
-    public void takeDamage()
+    public void TakeDamage()
     {
         health -= 1;
         if (health <= 0)
@@ -98,10 +102,14 @@ public partial class Player : CharacterBody2D
             {
                 deathSound.Play();
             }
+
+            hurtSound.Stream = hurtSounds[rng.Next(0, 5)];
+            AddChild(hurtSound);
+            hurtSound.Play();
         }
     }
 
-    public void heal()
+    public void Heal()
     {
         if (health < 5)
         {
@@ -115,6 +123,11 @@ public partial class Player : CharacterBody2D
         deathSound = new AudioStreamPlayer();
         deathSound.Stream = GD.Load<AudioStream>("res://Audio/death.mp3");
         AddChild(deathSound);
+
+        hurtSounds = [GD.Load<AudioStream>("res://Audio/glass1.mp3"), GD.Load<AudioStream>("res://Audio/glass2.mp3"), GD.Load<AudioStream>("res://Audio/glass3.mp3"), 
+            GD.Load<AudioStream>("res://Audio/glass4.mp3"), GD.Load<AudioStream>("res://Audio/glass5.mp3"), GD.Load<AudioStream>("res://Audio/glass6.mp3")];
+
+        hurtSound = new AudioStreamPlayer();
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -205,7 +218,7 @@ public partial class Player : CharacterBody2D
         // Player takes damage if not parried.
         else if (!bullet.isDeflected)
         {
-            takeDamage();
+            TakeDamage();
             bullet.DestroySelf();
         }
     }
