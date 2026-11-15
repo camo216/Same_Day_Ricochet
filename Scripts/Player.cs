@@ -156,8 +156,22 @@ public partial class Player : CharacterBody2D
         //    var collision = GetSlideCollision(i);
         //    HandleCollisions(collision);
         //}
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            HandleCollisions(collision);
+        }
 
         QueueRedraw();
+    }
+
+    // Handles collision interactions with the player.
+    private void HandleCollisions(KinematicCollision2D collision)
+    {
+        if (collision.GetCollider() is Spider spider)
+        {
+            spider.TakeDamage();
+        }
     }
 
     /// <summary>
