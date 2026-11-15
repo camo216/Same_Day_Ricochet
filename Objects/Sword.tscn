@@ -2,7 +2,5 @@
 
 [ext_resource type="Script" uid="uid://ck02q4ew20auh" path="res://Scripts/Sword.cs" id="1_4uorx"]
 
-[node name="Node2D" type="Node2D" unique_id=2085167364]
-
-[node name="Sword" type="CharacterBody2D" parent="." unique_id=584932757]
+[node name="Sword" type="CharacterBody2D" unique_id=584932757]
 script = ExtResource("1_4uorx")

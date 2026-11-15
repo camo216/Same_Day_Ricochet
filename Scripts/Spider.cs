@@ -4,12 +4,29 @@ using System;
 public partial class Spider : Enemy
 {
     private Vector2 drawVector = new Vector2(0, 0);
+    private enum ActionState
+    {
+        Waiting,
+        Action1
+    }
+    private ActionState state = ActionState.Waiting;
+    private const float WaitingCooldown = 1;
+    private const float Action1FirstShotCooldown = 1f;
+    private bool Action1FirstShotHasShot = false;
+    private const float Action1SecondShotCooldown = .5f;
+    private bool Action1SecondShotHasShot = false;
+    private const float Action1ThirdShotCooldown = 0f;
+    private bool Action1ThirdShotHasShot = false;
+    private float Action1BulletSpeed = 10;
+    private float cooldownTimer = WaitingCooldown;
     private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
-    public override void Inst()
+    public override void Inst(Node2D newPlayer, BulletManager bullet)
 	{
         manager = GetParent<EnemyManager>();
+        bulletManager = bullet;
+        player = newPlayer;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,8 +41,47 @@ public partial class Spider : Enemy
         MoveAndSlide();
     }
 
+    /// <summary>
+    /// Action logic for the spider
+    /// </summary>
+    /// <param name="delta">delta time</param>
     public override void DoAction(double delta)
     {
+        // Update timer
+        cooldownTimer -= (float)delta;
+        // Take action based on state
+        switch (state)
+        {
+            // Changes state to action once timer hits 0.
+            case ActionState.Waiting:
+                if (cooldownTimer <= 0)
+                {
+                    Action1FirstShotHasShot = false;
+                    Action1SecondShotHasShot = false;
+                    Action1ThirdShotHasShot = false;
+                    cooldownTimer = Action1FirstShotCooldown;
+                    state = ActionState.Action1;
+                }
+                break;
+            // Performs the logic for the spider's first attack.
+            case ActionState.Action1:
+                if (cooldownTimer <= Action1FirstShotCooldown && !Action1FirstShotHasShot)
+                {
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    Action1FirstShotHasShot = true;
+                }
+                if (cooldownTimer <= Action1SecondShotCooldown && !Action1SecondShotHasShot)
+                {
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    Action1SecondShotHasShot = true;
+                }
+                if (cooldownTimer <= Action1ThirdShotCooldown && !Action1ThirdShotHasShot)
+                {
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    Action1ThirdShotHasShot = true;
+                }
+                break;
+        }
     }
         
     public override void _Draw()
