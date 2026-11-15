@@ -3,7 +3,6 @@ using System;
 
 public partial class Book : Enemy
 {
-    private EnemyManager manager;
     private Vector2 drawVector = new Vector2(0, 0);
 
     // Called when the node enters the scene tree for the first time.

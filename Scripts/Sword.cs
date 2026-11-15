@@ -19,7 +19,7 @@ public partial class Sword : Enemy
     private bool Action2SecondShotHasShot = false;
     private const float Action2ThirdShotCooldown = 0f;
     private bool Action2ThirdShotHasShot = false;
-    private float Action1BulletSpeed = 100;
+    private float ActionBulletSpeed = 100;
 
 
     private Vector2 drawVector = new Vector2(0, 0);
@@ -76,11 +76,11 @@ public partial class Sword : Enemy
                 break;
             case ActionState.Action1:
                 // Spawn bullets
-                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(-40), Action1BulletSpeed);
-                bulletManager.CreateBullet(BulletType.Blue, this, BulletDirection(-20), Action1BulletSpeed);
-                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(0), Action1BulletSpeed);
-                bulletManager.CreateBullet(BulletType.Blue, this, BulletDirection(20), Action1BulletSpeed);
-                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(40), Action1BulletSpeed);
+                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(player.Position, -40), ActionBulletSpeed);
+                bulletManager.CreateBullet(BulletType.Blue, this, BulletDirection(player.Position, -20), ActionBulletSpeed);
+                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(player.Position, 0), ActionBulletSpeed);
+                bulletManager.CreateBullet(BulletType.Blue, this, BulletDirection(player.Position, 20), ActionBulletSpeed);
+                bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(player.Position, 40), ActionBulletSpeed);
 
                 // Enter attack cooldown.
                 cooldownTimer = WaitingCooldown;
@@ -90,17 +90,17 @@ public partial class Sword : Enemy
                 // Spawn bullets
                 if (cooldownTimer <= Action2FirstShotCooldown && !Action2FirstShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(player.Position, 0), ActionBulletSpeed);
                     Action2FirstShotHasShot = true;
                 }
                 if (cooldownTimer <= Action2SecondShotCooldown && !Action2SecondShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Red, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Red, this, BulletDirection(player.Position, 0), ActionBulletSpeed);
                     Action2SecondShotHasShot = true;
                 }
                 if (cooldownTimer <= Action2ThirdShotCooldown && !Action2ThirdShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Unblockable, this, BulletDirection(player.Position, 0), ActionBulletSpeed);
                     Action2ThirdShotHasShot = true;
                 }
                 if (cooldownTimer <= 0)

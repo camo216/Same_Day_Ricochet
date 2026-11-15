@@ -6,6 +6,7 @@ public abstract partial class Enemy : CharacterBody2D
 	[Export] protected int health;
     public string type;
 	protected Vector2 direction;
+    protected Vector2 targetDirection = new Vector2();
 	protected float speed;
 	protected Node2D player;
     protected BulletManager bulletManager;
@@ -34,9 +35,9 @@ public abstract partial class Enemy : CharacterBody2D
     /// </summary>
     /// <param name="angle">angle from the player in degrees</param>
     /// <returns>Direction vector of bullet.</returns>
-    protected Vector2 BulletDirection(float angle)
+    protected Vector2 BulletDirection(Vector2 target, float angle)
     {
-        Vector2 direction = new Vector2(player.Position.X - Transform.Origin.X, player.Position.Y - Transform.Origin.Y);
+        Vector2 direction = new Vector2(target.X - Transform.Origin.X, target.Y - Transform.Origin.Y);
         direction = direction.Rotated(Mathf.DegToRad(angle));
 		direction = direction.Normalized();
 

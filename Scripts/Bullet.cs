@@ -103,6 +103,8 @@ public partial class Bullet : Area2D
 				break;
 			case BulletType.Web: color = Color.Color8(255, 255, 255, 255);
 				break;
+			case BulletType.Unblockable: color = Color.Color8(255, 255, 0, 255);
+				break;
 		}
 		if (origin == null)
 		{
