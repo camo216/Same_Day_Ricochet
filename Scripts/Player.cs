@@ -94,7 +94,10 @@ public partial class Player : CharacterBody2D
         if (health <= 0)
         {
             // fuckin die
-            deathSound.Play();
+            if (deathSound.Playing == false)
+            {
+                deathSound.Play();
+            }
         }
     }
 
@@ -111,6 +114,7 @@ public partial class Player : CharacterBody2D
     {
         deathSound = new AudioStreamPlayer();
         deathSound.Stream = GD.Load<AudioStream>("res://Audio/death.mp3");
+        AddChild(deathSound);
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
