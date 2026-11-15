@@ -36,6 +36,8 @@ public partial class Player : CharacterBody2D
             Velocity = Velocity * .25f;
         }
     }
+    
+   
 
     private void UpdateCooldown(double delta)
     {

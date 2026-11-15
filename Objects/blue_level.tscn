@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blso66kjqilbk"]
 
 [ext_resource type="Script" uid="uid://d4cln4bf8pkdq" path="res://Scripts/BlueWall.cs" id="1_t8b0b"]
-[ext_resource type="Script" uid="uid://bswwh4t3q37t8" path="res://Scripts/DoorTrigger.cs" id="2_ukgux"]
+[ext_resource type="Script" uid="uid://cm3igmwihjsi8" path="res://Scripts/BlueDoorTrigger.cs" id="2_4tm88"]
 [ext_resource type="Script" uid="uid://duhnrshjgtvnr" path="res://Scripts/Door.cs" id="3_4tm88"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0pfi2"]
@@ -72,7 +72,8 @@ debug_color = Color(0, 0.6, 0.69803923, 0)
 position = Vector2(0, -460)
 rotation = 1.5707964
 scale = Vector2(1, 10)
-script = ExtResource("2_ukgux")
+collision_mask = 13
+script = ExtResource("2_4tm88")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" unique_id=1178744853]
 shape = SubResource("RectangleShape2D_wccwa")
@@ -87,3 +88,5 @@ script = ExtResource("3_4tm88")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=8296582]
 shape = SubResource("RectangleShape2D_wccwa")
 debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
+
+[connection signal="body_entered" from="Door_Trigger" to="Door_Trigger" method="OnCollision"]

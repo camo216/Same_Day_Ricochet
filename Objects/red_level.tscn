@@ -1,14 +1,25 @@
 [gd_scene format=3 uid="uid://c4r66r3jewpc3"]
 
 [ext_resource type="Script" uid="uid://cntbkhwnwy2rt" path="res://Scripts/RedWall.cs" id="1_e6kdv"]
-[ext_resource type="Script" uid="uid://bswwh4t3q37t8" path="res://Scripts/DoorTrigger.cs" id="2_ldmty"]
+[ext_resource type="Script" uid="uid://cakecq1oggsxm" path="res://Scripts/RedDoorTrigger.cs" id="2_lll34"]
 [ext_resource type="Script" uid="uid://duhnrshjgtvnr" path="res://Scripts/Door.cs" id="3_0phg6"]
+[ext_resource type="Script" uid="uid://cebuxet7oyym1" path="res://Scripts/Player.cs" id="4_lll34"]
+[ext_resource type="Script" uid="uid://ijti3263jqpc" path="res://Scripts/BulletManager.cs" id="5_0ey3p"]
+[ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="6_1yhta"]
+[ext_resource type="Script" uid="uid://ct6f6xhxqm2pk" path="res://Scripts/EnemyManager.cs" id="7_ios5w"]
+[ext_resource type="PackedScene" uid="uid://bt8urbblcipr4" path="res://Objects/Spider.tscn" id="8_3grki"]
+[ext_resource type="PackedScene" uid="uid://c7vw55sbj6a2j" path="res://Objects/Sword.tscn" id="9_j8w6g"]
+[ext_resource type="PackedScene" uid="uid://dgy3dkuvpi4ym" path="res://Objects/Book.tscn" id="10_yx7kp"]
+[ext_resource type="PackedScene" uid="uid://hscddh7257um" path="res://Objects/Amulet.tscn" id="11_olpbm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldmty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0phg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lll34"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e733x"]
+radius = 18.0
 
 [node name="RedLevel" type="Node2D" unique_id=1950552735]
 
@@ -74,7 +85,7 @@ debug_color = Color(0.50980395, 0, 0, 0)
 position = Vector2(0, -460)
 rotation = 1.5707964
 scale = Vector2(1, 10)
-script = ExtResource("2_ldmty")
+script = ExtResource("2_lll34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" unique_id=32831310]
 shape = SubResource("RectangleShape2D_0phg6")
@@ -89,3 +100,27 @@ script = ExtResource("3_0phg6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=917029585]
 shape = SubResource("RectangleShape2D_lll34")
 debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=410484859 groups=["Persist"]]
+collision_mask = 13
+script = ExtResource("4_lll34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=851196064]
+shape = SubResource("CircleShape2D_e733x")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=822899744]
+
+[node name="BulletManager" type="Node2D" parent="." unique_id=1929037144]
+script = ExtResource("5_0ey3p")
+bulletObject = ExtResource("6_1yhta")
+
+[node name="EnemyManager" type="Node2D" parent="." unique_id=2049969553 node_paths=PackedStringArray("player", "bulletManager")]
+script = ExtResource("7_ios5w")
+spiderObject = ExtResource("8_3grki")
+swordObject = ExtResource("9_j8w6g")
+bookObject = ExtResource("10_yx7kp")
+amuletObject = ExtResource("11_olpbm")
+player = NodePath("")
+bulletManager = NodePath("")
+
+[connection signal="body_entered" from="Door_Trigger" to="Door_Trigger" method="OnCollision"]

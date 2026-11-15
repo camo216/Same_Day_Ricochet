@@ -1,14 +1,14 @@
 using Godot;
 using System;
 
-public partial class DoorTrigger : Area2D
+public partial class GreenDoorTrigger : Area2D
 {
-	public int level = (int)Stage.Blue;
-
+	public int level = 2;
+	Player player = new Player();
 	private AudioStreamPlayer levelMusic;
 
     public bool changeLevel;
-    public bool cleared = false;
+    public bool cleared = true;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -26,34 +26,20 @@ public partial class DoorTrigger : Area2D
 	}
 
 	private void LoopMusic() { levelMusic.Play(); }
-
+	
 	private void OnCollision(CharacterBody2D collision)
 	{
-		if (collision is Player p && cleared == true)
+		//GD.Print("Collide");
+		if (collision is Player p)
 		{
-			changeLevel = true;
+			
 			ChangeLevel();
 		}
-		
 	}
-	private void ChangeLevel()
+	
+	public void ChangeLevel()
 	{
-		switch (level)
-		{
-			case (int)Stage.Blue:
-				level = (int)Stage.Red;
-				
-				changeLevel = false;
-				break;
-			case (int)Stage.Red:
-				level = (int)Stage.Green;
-				changeLevel = false;
-				break;
-			case (int)Stage.Green:
-				level = (int)Stage.Wizard;
-				changeLevel = false;
-				break;
-		}
+		GetTree().ChangeSceneToFile("res://Objects/wizard_level.tscn");
 	}
 
     

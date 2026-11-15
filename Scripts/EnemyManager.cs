@@ -18,13 +18,14 @@ public partial class EnemyManager : Node
 
 	// Bullet manager reference
 	[Export] private BulletManager bulletManager;
-
+	
 	// Properties
 	public int EnemyCount { get => enemies.Count; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		
 		CreateEnemy("Sword", new Vector2(300, 0));
 		CreateEnemy("Spider", new Vector2(300, 0));
 	}

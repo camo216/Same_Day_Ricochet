@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d4cln4bf8pkdq" path="res://Scripts/BlueWall.cs" id="1_myjc7"]
 [ext_resource type="Script" uid="uid://cntbkhwnwy2rt" path="res://Scripts/RedWall.cs" id="2_y3b5k"]
 [ext_resource type="Script" uid="uid://bo7vqq64mns" path="res://Scripts/GreenWall.cs" id="3_kmaob"]
+[ext_resource type="Script" uid="uid://cebuxet7oyym1" path="res://Scripts/Player.cs" id="4_kmaob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exje5"]
 
@@ -15,6 +16,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb7jo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3b5k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_db3s4"]
+radius = 18.0
 
 [node name="Wizard_Level" type="Node2D" unique_id=1488993236]
 
@@ -87,3 +91,12 @@ script = ExtResource("3_kmaob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Green_Wall5" unique_id=1641734600]
 shape = SubResource("RectangleShape2D_y3b5k")
 debug_color = Color(0, 0.3137255, 0, 0)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=360569629 groups=["Persist"]]
+collision_mask = 13
+script = ExtResource("4_kmaob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1439811430]
+shape = SubResource("CircleShape2D_db3s4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=915689445]
