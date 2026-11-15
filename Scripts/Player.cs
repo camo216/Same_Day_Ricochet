@@ -154,14 +154,23 @@ public partial class Player : CharacterBody2D
 
         UpdateVelocity();
         MoveAndSlide();
-        // Calls a method to handle each collision that happened.
-        //for (int i = 0; i < GetSlideCollisionCount(); i++)
-        //{
-        //    var collision = GetSlideCollision(i);
-        //    HandleCollisions(collision);
-        //}
+        //Calls a method to handle each collision that happened.
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            HandleCollisions(collision);
+        }
 
         QueueRedraw();
+    }
+
+    // Handles collision interactions with the player.
+    private void HandleCollisions(KinematicCollision2D collision)
+    {
+        if (collision.GetCollider() is Spider spider)
+        {
+            spider.TakeDamage();
+        }
     }
 
     /// <summary>
