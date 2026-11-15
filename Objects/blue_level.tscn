@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://blso66kjqilbk"]
+
+[ext_resource type="Script" uid="uid://d4cln4bf8pkdq" path="res://Scripts/BlueWall.cs" id="1_t8b0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pfi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wccwa"]
+
+[node name="BlueLevel" type="Node2D" unique_id=861394135]
+
+[node name="Blue_Wall" type="CharacterBody2D" parent="." unique_id=1694264737 groups=["Persist"]]
+position = Vector2(595, 0)
+scale = Vector2(1, 45)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_t8b0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall" unique_id=965411522]
+shape = SubResource("RectangleShape2D_0pfi2")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall2" type="CharacterBody2D" parent="." unique_id=1571211546 groups=["Persist"]]
+position = Vector2(-615, 0)
+scale = Vector2(1, 45)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_t8b0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall2" unique_id=292960480]
+shape = SubResource("RectangleShape2D_0pfi2")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall3" type="CharacterBody2D" parent="." unique_id=549130068 groups=["Persist"]]
+position = Vector2(0, 440)
+rotation = 1.5707964
+scale = Vector2(1, 60)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_t8b0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall3" unique_id=1800242230]
+shape = SubResource("RectangleShape2D_0pfi2")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall4" type="CharacterBody2D" parent="." unique_id=86273518 groups=["Persist"]]
+position = Vector2(-350, -460)
+rotation = 1.5707964
+scale = Vector2(1, 25)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_t8b0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall4" unique_id=615496684]
+shape = SubResource("RectangleShape2D_0pfi2")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall5" type="CharacterBody2D" parent="." unique_id=663976876 groups=["Persist"]]
+position = Vector2(350, -460)
+rotation = 1.5707964
+scale = Vector2(1, 25)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_t8b0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall5" unique_id=238379110]
+shape = SubResource("RectangleShape2D_0pfi2")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Door" type="Area2D" parent="." unique_id=728186334]
+position = Vector2(0, -460)
+scale = Vector2(10, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1178744853]
+shape = SubResource("RectangleShape2D_wccwa")
+debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
