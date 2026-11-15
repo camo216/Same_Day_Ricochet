@@ -32,7 +32,8 @@ public partial class Bullet : CharacterBody2D
 		manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
-	}
+		Position = new Vector2(origin.Transform.Origin.X, origin.Transform.Origin.Y);
+    }
 
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.

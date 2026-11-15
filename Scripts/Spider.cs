@@ -80,6 +80,11 @@ public partial class Spider : Enemy
                     bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
                     Action1ThirdShotHasShot = true;
                 }
+                if (cooldownTimer <= 0)
+                {
+                    cooldownTimer = WaitingCooldown;
+                    state = ActionState.Waiting;
+                }
                 break;
         }
     }
