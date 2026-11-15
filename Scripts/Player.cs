@@ -103,8 +103,7 @@ public partial class Player : CharacterBody2D
                 deathSound.Play();
             }
 
-            hurtSound.Stream = hurtSounds[rng.Next(0, 5)];
-            AddChild(hurtSound);
+            hurtSound.Stream = hurtSounds[rng.Next(1, 5)];
             hurtSound.Play();
         }
     }
@@ -128,6 +127,7 @@ public partial class Player : CharacterBody2D
             GD.Load<AudioStream>("res://Audio/glass4.mp3"), GD.Load<AudioStream>("res://Audio/glass5.mp3"), GD.Load<AudioStream>("res://Audio/glass6.mp3")];
 
         hurtSound = new AudioStreamPlayer();
+        AddChild(hurtSound);
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
