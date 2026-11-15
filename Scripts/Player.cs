@@ -158,7 +158,12 @@ public partial class Player : CharacterBody2D
 
         UpdateVelocity();
         MoveAndSlide();
-        //Calls a method to handle each collision that happened.
+        // Calls a method to handle each collision that happened.
+        //for (int i = 0; i < GetSlideCollisionCount(); i++)
+        //{
+        //    var collision = GetSlideCollision(i);
+        //    HandleCollisions(collision);
+        //}
         for (int i = 0; i < GetSlideCollisionCount(); i++)
         {
             var collision = GetSlideCollision(i);

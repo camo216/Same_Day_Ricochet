@@ -3,6 +3,8 @@ using System;
 
 public partial class Book : Enemy
 {
+    private EnemyManager manager;
+    private Vector2 drawVector = new Vector2(0, 0);
 
     // Called when the node enters the scene tree for the first time.
     public override void Inst(Node2D newPlayer, BulletManager bullet)
@@ -28,4 +30,11 @@ public partial class Book : Enemy
     {
 
     }
+
+    public override void _Draw()
+    {
+        DrawRect(new Rect2(drawVector, 26, 20), Color.Color8(255, 255, 255, 255), false, 1);
+        DrawLine(new Vector2(13, 20), new Vector2(13, 0), Color.Color8(255, 255, 255, 255), 1);
+    }
+
 }
