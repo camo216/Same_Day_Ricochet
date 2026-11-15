@@ -9,4 +9,5 @@ radius = 6.0
 script = ExtResource("1_pmdeo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119261310]
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_s2kof")

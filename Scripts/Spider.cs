@@ -17,7 +17,7 @@ public partial class Spider : Enemy
     private bool Action1SecondShotHasShot = false;
     private const float Action1ThirdShotCooldown = 0f;
     private bool Action1ThirdShotHasShot = false;
-    private float Action1BulletSpeed = 10;
+    private float Action1BulletSpeed = 75;
     private float cooldownTimer = WaitingCooldown;
 
     // Called when the node enters the scene tree for the first time.
@@ -29,13 +29,14 @@ public partial class Spider : Enemy
         player = newPlayer;
         health = 1;
         direction = new Vector2(rng.Next(-1,1), rng.Next(-1,1)).Normalized();
-        speed = 5;
+        speed = 20;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
         QueueRedraw();
+        base._Process(delta);
     }
 
 	public override void Move(double delta)
@@ -73,17 +74,17 @@ public partial class Spider : Enemy
             case ActionState.Action1:
                 if (cooldownTimer <= Action1FirstShotCooldown && !Action1FirstShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(30), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(player.Position, 30), Action1BulletSpeed);
                     Action1FirstShotHasShot = true;
                 }
                 if (cooldownTimer <= Action1SecondShotCooldown && !Action1SecondShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(player.Position, 0), Action1BulletSpeed);
                     Action1SecondShotHasShot = true;
                 }
                 if (cooldownTimer <= Action1ThirdShotCooldown && !Action1ThirdShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(-30), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(player.Position, -30), Action1BulletSpeed);
                     Action1ThirdShotHasShot = true;
                 }
                 if (cooldownTimer <= 0)
