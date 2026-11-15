@@ -3,13 +3,14 @@ using System;
 
 public partial class Bullet : CharacterBody2D
 {
-    // Variables
-    private Vector2 drawVector = new Vector2(0, 0);
-    private BulletType type = BulletType.None;
+	// Variables
+	private Vector2 drawVector = new Vector2(0, 0);
+	private BulletType type = BulletType.None;
 	private Enemy origin = null;
 	private BulletManager manager;
 
-	[Export] private Vector2 direction = new Vector2(0,0);
+
+    [Export] private Vector2 direction = new Vector2(0, 0);
 	[Export] private float speed = 0;
 
 	[Export] public bool isDeflected = false;
@@ -28,10 +29,10 @@ public partial class Bullet : CharacterBody2D
 	{
 		type = newType;
 		origin = creator;
-        manager = GetParent<BulletManager>();
+		manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
-    }
+	}
 
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.
@@ -42,13 +43,13 @@ public partial class Bullet : CharacterBody2D
 		// Determine direction and velocity.
 		if (isDeflected)
 		{
-            direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);  
-        }
-        Velocity = direction.Normalized() * speed;
+			direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);
+		}
+		Velocity = direction.Normalized() * speed;
 
 		// Move the bullet.
-        MoveAndCollide(Velocity * (float)delta);
-    }
+		MoveAndCollide(Velocity * (float)delta);
+	}
 
 	/// <summary>
 	/// Calls the proper methods to destroy the bullet.
@@ -68,5 +69,10 @@ public partial class Bullet : CharacterBody2D
 		{
 			DrawCircle(drawVector, 2, Color.Color8(255, 255, 255, 255));
 		}
+		else if (origin.Name == "Book")
+		{
+
+		}
+
 	}
 }
