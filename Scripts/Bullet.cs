@@ -12,7 +12,6 @@ public partial class Bullet : Area2D
 
 
 	[Export] private Vector2 direction = new Vector2(0, 0);
-    [Export] private Vector2 direction = new Vector2(0, 0);
 	[Export] private float speed = 0;
 
 	[Export] public bool isDeflected = false;
