@@ -38,7 +38,8 @@ public partial class Sword : Enemy
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
 	{
-	}
+        base._Process(delta);
+    }
 
     public override void Move(double delta)
     {

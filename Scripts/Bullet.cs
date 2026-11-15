@@ -9,6 +9,7 @@ public partial class Bullet : Area2D
 	private Enemy origin = null;
 	private BulletManager manager;
 	public Color color;
+	private string drawType;
 
 
 	[Export] private Vector2 direction = new Vector2(0, 0);
@@ -30,6 +31,7 @@ public partial class Bullet : Area2D
 	{
 		type = newType;
 		origin = creator;
+		drawType = origin.type;
 		manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
@@ -47,10 +49,18 @@ public partial class Bullet : Area2D
 	/// <param name="delta">delta time</param>
 	public void Move(double delta)
 	{
-		// Determine direction and velocity.
-		if (isDeflected)
+		// check if origin still exists.
+		if (origin != null)
 		{
-			direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);  
+			if (origin.isDying)
+			{
+				origin = null;
+			}
+		}
+		// Determine direction and velocity.
+		if (isDeflected && origin != null)
+		{
+			direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);
 		}
 		// Move the bullet.
 		Position += direction.Normalized() * speed * (float)delta;
@@ -106,24 +116,24 @@ public partial class Bullet : Area2D
 			case BulletType.Unblockable: color = Color.Color8(255, 255, 0, 255);
 				break;
 		}
-		if (origin == null)
-		{
-			GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
-		}
-		else if (origin.type == "Spider")
+		//if (origin == null)
+		//{
+		//	GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
+		//}
+		if (drawType == "Spider")
 		{
 			DrawCircle(drawVector, 2, color);
 		}
-		else if (origin.type == "Book")
+		else if (drawType == "Book")
 		{
 
 			DrawRect(new Rect2 (drawVector, 10, 10), color, false, 1);
 		}
-		else if (origin.type == "Amulet")
+		else if (drawType == "Amulet")
 		{
 			DrawRect(new Rect2(drawVector, 10, 10), color, true);
 		}
-		else if (origin.type == "Sword")
+		else if (drawType == "Sword")
 		{
 			DrawArc(drawVector, 10, 0, 3, 10, color, 3);
 		}
