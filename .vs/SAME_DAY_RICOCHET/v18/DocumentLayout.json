@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Sword.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Scripts\\Sword.cs",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Spider.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Spider.cs",
               "RelativeDocumentMoniker": "Scripts\\Spider.cs",
@@ -71,12 +71,11 @@
               "RelativeToolTip": "Scripts\\Spider.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAYwBsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Scripts\\Bullet.cs",
@@ -84,18 +83,17 @@
               "RelativeToolTip": "Scripts\\Bullet.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAuwGIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Scripts\\EnemyManager.cs",
               "ToolTip": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeToolTip": "Scripts\\EnemyManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAmwGcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T16:30:15.92Z",
               "EditorCaption": ""
@@ -110,8 +108,7 @@
               "RelativeToolTip": "Scripts\\BulletManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.945Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "Scripts\\Enums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.947Z"
             },
             {
               "$type": "Document",
@@ -136,8 +132,7 @@
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAgwJ8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.955Z"
             },
             {
               "$type": "Document",
@@ -149,8 +144,7 @@
               "RelativeToolTip": "Scripts\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T16:30:15.957Z"
             }
           ]
         }

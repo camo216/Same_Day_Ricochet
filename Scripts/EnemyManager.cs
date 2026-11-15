@@ -6,9 +6,12 @@ public partial class EnemyManager : Node
 {
 	// Enemy objects
 	[Export] private PackedScene spiderObject;
+	[Export] private PackedScene swordObject;
+    [Export] private PackedScene bookObject;
+    [Export] private PackedScene amuletObject;
 
-	// Enemy list
-	private List<Enemy> enemies = new List<Enemy>();
+    // Enemy list
+    private List<Enemy> enemies = new List<Enemy>();
 
 	// Player reference
 	[Export] private Node2D player;
@@ -77,6 +80,33 @@ public partial class EnemyManager : Node
 
                 enemies[enemies.Count - 1].Position = position;
 				break;
+			case "Book":
+                newEnemy = bookObject.Instantiate();
+                AddChild(newEnemy);
+                enemies.Add(newEnemy as Book);
+
+                enemies[enemies.Count - 1].Inst(player, bulletManager);
+
+                enemies[enemies.Count - 1].Position = position;
+                break;
+			case "Amulet":
+                newEnemy = amuletObject.Instantiate();
+                AddChild(newEnemy);
+                enemies.Add(newEnemy as Amulet);
+
+                enemies[enemies.Count - 1].Inst(player, bulletManager);
+
+                enemies[enemies.Count - 1].Position = position;
+                break;
+			case "Sword":
+                newEnemy = swordObject.Instantiate();
+                AddChild(newEnemy);
+                enemies.Add(newEnemy as Sword);
+
+                enemies[enemies.Count - 1].Inst(player, bulletManager);
+
+                enemies[enemies.Count - 1].Position = position;
+                break;
 		}
 	}
 
