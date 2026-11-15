@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Same_Day_Ricochet"
-run/main_scene="uid://bcoa31wyhb76y"
+run/main_scene="uid://dr26i10r40cld"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 run/max_fps=30
 config/icon="res://icon.svg"

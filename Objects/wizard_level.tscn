@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b5p8gpanr831w"]
 
+[ext_resource type="Script" uid="uid://2ljdwfkn2ggb" path="res://Scripts/WizardLevel.cs" id="1_db3s4"]
 [ext_resource type="Script" uid="uid://d4cln4bf8pkdq" path="res://Scripts/BlueWall.cs" id="1_myjc7"]
 [ext_resource type="Script" uid="uid://cntbkhwnwy2rt" path="res://Scripts/RedWall.cs" id="2_y3b5k"]
 [ext_resource type="Script" uid="uid://bo7vqq64mns" path="res://Scripts/GreenWall.cs" id="3_kmaob"]
@@ -21,6 +22,7 @@
 radius = 18.0
 
 [node name="Wizard_Level" type="Node2D" unique_id=1488993236]
+script = ExtResource("1_db3s4")
 
 [node name="Blue_Wall" type="CharacterBody2D" parent="." unique_id=781928755 groups=["Persist"]]
 position = Vector2(595, 0)

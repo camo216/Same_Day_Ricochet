@@ -140,6 +140,7 @@ public partial class Player : CharacterBody2D
 
         hurtSound = new AudioStreamPlayer();
         AddChild(hurtSound);
+
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
