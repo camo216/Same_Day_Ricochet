@@ -16,3 +16,4 @@ public enum Stage
     Green,
     Wizard
 }
+
