@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://c8b6hxadxo1sn"]
 
 [ext_resource type="Script" uid="uid://bo7vqq64mns" path="res://Scripts/GreenWall.cs" id="1_45mhk"]
+[ext_resource type="Script" uid="uid://bswwh4t3q37t8" path="res://Scripts/DoorTrigger.cs" id="2_e1wnl"]
+[ext_resource type="Script" uid="uid://duhnrshjgtvnr" path="res://Scripts/Door.cs" id="3_v8bn7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1wnl"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_45mhk"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8bn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stjud"]
 
 [node name="Green_Level" type="Node2D" unique_id=102750005]
 
@@ -66,10 +70,22 @@ script = ExtResource("1_45mhk")
 shape = SubResource("RectangleShape2D_e1wnl")
 debug_color = Color(0, 0.3137255, 0, 0)
 
-[node name="Door" type="Area2D" parent="." unique_id=82895393]
+[node name="Door_Trigger" type="Area2D" parent="." unique_id=1303509558 groups=["Persist"]]
 position = Vector2(0, -460)
-scale = Vector2(10, 1)
+rotation = 1.5707964
+scale = Vector2(1, 10)
+script = ExtResource("2_e1wnl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=173061916]
-shape = SubResource("RectangleShape2D_45mhk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" unique_id=884360552]
+shape = SubResource("RectangleShape2D_v8bn7")
+debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
+
+[node name="Door" type="CharacterBody2D" parent="." unique_id=2066700785]
+position = Vector2(0, -460)
+rotation = 1.5707964
+scale = Vector2(1, 10)
+script = ExtResource("3_v8bn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1352525258]
+shape = SubResource("RectangleShape2D_stjud")
 debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)

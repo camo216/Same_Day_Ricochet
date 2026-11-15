@@ -6,7 +6,7 @@ public partial class Player : CharacterBody2D
 {
     private Vector2 drawVector = new Vector2(0, 0);
     private const int speed = 500;
-
+    
     private bool onCooldown = false;
     private const double cooldownTime = 0.75;
     private const double parryTime = 0.5;
