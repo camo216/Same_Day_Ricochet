@@ -82,6 +82,7 @@ public partial class Spider : Enemy
                 }
                 if (cooldownTimer <= 0)
                 {
+                    cooldownTimer = WaitingCooldown;
                     state = ActionState.Waiting;
                 }
                 break;

@@ -31,7 +31,7 @@ public partial class Bullet : CharacterBody2D
         manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
-		MoveAndCollide(new Vector2(origin.Transform.Origin.X, origin.Transform.Origin.Y));
+		Position = new Vector2(origin.Transform.Origin.X, origin.Transform.Origin.Y);
     }
 
 	/// <summary>
