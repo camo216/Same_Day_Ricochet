@@ -6,6 +6,7 @@ public partial class Player : CharacterBody2D
 {
     private Vector2 drawVector = new Vector2(0, 0);
     private const int speed = 500;
+    private AudioStreamPlayer deathSound;
     
     private bool onCooldown = false;
     private const double cooldownTime = 0.75;
@@ -93,6 +94,7 @@ public partial class Player : CharacterBody2D
         if (health <= 0)
         {
             // fuckin die
+            deathSound.Play();
         }
     }
 
@@ -107,6 +109,8 @@ public partial class Player : CharacterBody2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        deathSound = new AudioStreamPlayer();
+        deathSound.Stream = GD.Load<AudioStream>("res://Audio/death.mp3");
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
