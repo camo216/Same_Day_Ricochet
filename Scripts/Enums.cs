@@ -9,3 +9,10 @@ public enum BulletType
     Green,
     Web
 }
+public enum Stage
+{
+    Blue,
+    Red,
+    Green,
+    Wizard
+}
