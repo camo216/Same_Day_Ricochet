@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8b6hxadxo1sn" path="res://Objects/green_level.tscn" id="6_r0x5m"]
 [ext_resource type="PackedScene" uid="uid://c4r66r3jewpc3" path="res://Objects/red_level.tscn" id="7_2vekm"]
 [ext_resource type="PackedScene" uid="uid://b5p8gpanr831w" path="res://Objects/wizard_level.tscn" id="7_3mrqo"]
+[ext_resource type="Texture2D" uid="uid://x8sokl43hvu7" path="res://Art/SDR_wizard.png" id="10_yx171"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 radius = 18.110771
@@ -44,3 +45,8 @@ position = Vector2(2694, 0)
 
 [node name="Wizard_Level" parent="." unique_id=1488993236 instance=ExtResource("7_3mrqo")]
 position = Vector2(4031, 0)
+
+[node name="SdrWizard" type="Sprite2D" parent="." unique_id=138587346]
+position = Vector2(4027, -367)
+scale = Vector2(3, 3)
+texture = ExtResource("10_yx171")
