@@ -4,3 +4,7 @@
 
 [node name="Sword" type="CharacterBody2D" unique_id=584932757]
 script = ExtResource("1_4uorx")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=847182675]
+position = Vector2(5, 10)
+polygon = PackedVector2Array(-5, -10, 5, -10, 5, 10, 0, 15, -5, 10)

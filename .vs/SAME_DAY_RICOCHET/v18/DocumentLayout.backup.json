@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,12 +14,29 @@
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +49,8 @@
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\users\\xetid\\documents\\github\\same_day_ricochet\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -72,6 +92,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Book.cs",
               "RelativeDocumentMoniker": "Scripts\\Book.cs",
@@ -85,32 +106,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+=======
+>>>>>>> Stashed changes
               "Title": "Sword.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Scripts\\Sword.cs",
               "ToolTip": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Sword.cs",
               "RelativeToolTip": "Scripts\\Sword.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wBEAAAAAAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBgAAAAXAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T18:41:38.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 4,
+=======
+              "DocumentIndex": 2,
+>>>>>>> Stashed changes
               "Title": "Spider.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Spider.cs",
               "RelativeDocumentMoniker": "Scripts\\Spider.cs",
               "ToolTip": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Spider.cs",
               "RelativeToolTip": "Scripts\\Spider.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wBQAAAAyAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwBsAAAAYAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T16:30:15.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 6,
+=======
+              "DocumentIndex": 1,
+>>>>>>> Stashed changes
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Scripts\\Bullet.cs",
@@ -118,24 +157,37 @@
               "RelativeToolTip": "Scripts\\Bullet.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAuwGIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.943Z"
+              "WhenOpened": "2026-11-15T16:30:15.943Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
+=======
+              "DocumentIndex": 3,
+>>>>>>> Stashed changes
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Scripts\\EnemyManager.cs",
               "ToolTip": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeToolTip": "Scripts\\EnemyManager.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAGIAAAAAAAAAAAAmwBsAAAAkAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T16:30:15.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 9,
+=======
+              "DocumentIndex": 7,
+>>>>>>> Stashed changes
               "Title": "BulletManager.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\BulletManager.cs",
               "RelativeDocumentMoniker": "Scripts\\BulletManager.cs",
@@ -143,11 +195,16 @@
               "RelativeToolTip": "Scripts\\BulletManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.945Z"
+              "WhenOpened": "2026-11-15T16:30:15.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 6,
+>>>>>>> Stashed changes
               "Title": "Enums.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Enums.cs",
               "RelativeDocumentMoniker": "Scripts\\Enums.cs",
@@ -155,11 +212,16 @@
               "RelativeToolTip": "Scripts\\Enums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.947Z"
+              "WhenOpened": "2026-11-15T16:30:15.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 5,
+>>>>>>> Stashed changes
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
@@ -167,17 +229,26 @@
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAgwJ8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T16:30:15.955Z"
+              "WhenOpened": "2026-11-15T16:30:15.955Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Scripts\\Enemy.cs",
               "ToolTip": "C:\\Users\\xetid\\Documents\\GitHub\\Same_Day_Ricochet\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Scripts\\Enemy.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T16:30:15.957Z",
               "EditorCaption": ""

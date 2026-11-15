@@ -1,6 +1,5 @@
 using Godot;
 using System;
-
 public partial class Sword : Enemy
 {
     private enum ActionState
@@ -23,6 +22,7 @@ public partial class Sword : Enemy
     private float Action1BulletSpeed = 100;
 
 
+    private Vector2 drawVector = new Vector2(0, 0);
     // Called when the node enters the scene tree for the first time.
     public override void Inst(Node2D newPlayer, BulletManager bullet)
     {
@@ -110,5 +110,13 @@ public partial class Sword : Enemy
                 }
                 break;
         }
+    }
+
+    public override void _Draw()
+    {
+        DrawRect(new Rect2(drawVector, 10, 20), Color.Color8(255, 255, 255, 255), false, 1);
+        DrawLine(new Vector2(5, -10), new Vector2(5, 0), Color.Color8(255, 255, 255, 255), 1);
+        DrawLine(new Vector2(0,20), new Vector2(5, 25), Color.Color8(255, 255,255, 255), 1);
+        DrawLine(new Vector2(10, 20), new Vector2(5, 25), Color.Color8(255, 255, 255, 255), 1);
     }
 }
