@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://cebuxet7oyym1" path="res://Scripts/Player.cs" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://ijti3263jqpc" path="res://Scripts/BulletManager.cs" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://blso66kjqilbk" path="res://Objects/blue_level.tscn" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://c4r66r3jewpc3" path="res://Objects/red_level.tscn" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://c8b6hxadxo1sn" path="res://Objects/green_level.tscn" id="6_r0x5m"]
+[ext_resource type="PackedScene" uid="uid://b5p8gpanr831w" path="res://Objects/wizard_level.tscn" id="7_3mrqo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 radius = 18.110771
@@ -21,3 +25,14 @@ shape = SubResource("CircleShape2D_s2kof")
 [node name="BulletManager" type="Node2D" parent="." unique_id=1301194487]
 script = ExtResource("2_xkndl")
 bulletObject = ExtResource("3_u44n3")
+
+[node name="BlueLevel" parent="." unique_id=861394135 instance=ExtResource("4_sb48q")]
+
+[node name="RedLevel" parent="." unique_id=1950552735 instance=ExtResource("5_t88pq")]
+position = Vector2(1364, 0)
+
+[node name="Green_Level" parent="." unique_id=102750005 instance=ExtResource("6_r0x5m")]
+position = Vector2(2694, 0)
+
+[node name="Wizard_Level" parent="." unique_id=1488993236 instance=ExtResource("7_3mrqo")]
+position = Vector2(4031, 0)
