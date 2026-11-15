@@ -4,7 +4,6 @@ using System.Runtime.InteropServices.JavaScript;
 public partial class Amulet : Enemy
 {
     private Vector2 drawVector = new Vector2(0, 0);
-    private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
     public override void Inst(Node2D newPlayer, BulletManager bullet)

@@ -36,6 +36,11 @@ public partial class Bullet : Area2D
 		Position = new Vector2(origin.Transform.Origin.X, origin.Transform.Origin.Y);
 	}
 
+	public override void _Process(double delta)
+	{
+		QueueRedraw();
+	}
+
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.
 	/// </summary>
@@ -69,7 +74,12 @@ public partial class Bullet : Area2D
 			if (isDeflected)
 			{
 				e.TakeDamage();
+				DestroySelf();
 			}
+		}
+		else
+		{
+			DestroySelf();
 		}
 	}
 
@@ -83,35 +93,35 @@ public partial class Bullet : Area2D
 
 	public override void _Draw()
 	{
+
 		switch (type){
 			case BulletType.Blue: color = Color.Color8(0, 0, 255, 255); 
-				return;
+				break;
 			case BulletType.Green: color = Color.Color8(0, 255, 0, 255);
-				return;
+				break;
 			case BulletType.Red: color = Color.Color8(255, 0, 0, 255);
-				return;
+				break;
 			case BulletType.Web: color = Color.Color8(255, 255, 255, 255);
-				return;
+				break;
 		}
 		if (origin == null)
 		{
 			GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
 		}
-		else if (origin.Name == "Spider")
+		else if (origin.type == "Spider")
 		{
-			DrawCircle(drawVector, 2, Color.Color8(255, 255, 255, 255));
 			DrawCircle(drawVector, 2, color);
 		}
-		else if (origin.Name == "Book")
+		else if (origin.type == "Book")
 		{
 
 			DrawRect(new Rect2 (drawVector, 10, 10), color, false, 1);
 		}
-		else if (origin.Name == "Amulet")
+		else if (origin.type == "Amulet")
 		{
-            DrawRect(new Rect2(drawVector, 10, 10), color, true);
-        }
-		else if (origin.Name == "Sword")
+			DrawRect(new Rect2(drawVector, 10, 10), color, true);
+		}
+		else if (origin.type == "Sword")
 		{
 			DrawArc(drawVector, 10, 0, 3, 10, color, 3);
 		}

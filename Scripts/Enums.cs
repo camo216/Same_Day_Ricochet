@@ -7,7 +7,8 @@ public enum BulletType
     Blue,
     Red,
     Green,
-    Web
+    Web,
+    Unblockable
 }
 public enum Stage
 {

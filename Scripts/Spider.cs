@@ -19,12 +19,12 @@ public partial class Spider : Enemy
     private bool Action1ThirdShotHasShot = false;
     private float Action1BulletSpeed = 10;
     private float cooldownTimer = WaitingCooldown;
-    private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
     public override void Inst(Node2D newPlayer, BulletManager bullet)
 	{
         manager = GetParent<EnemyManager>();
+        type = "Spider";
         bulletManager = bullet;
         player = newPlayer;
         health = 1;
