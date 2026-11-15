@@ -116,7 +116,7 @@
               "RelativeDocumentMoniker": "Scripts\\Door.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Door.cs",
               "RelativeToolTip": "Scripts\\Door.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvysAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T21:19:25.198Z",
               "EditorCaption": ""
@@ -191,8 +191,7 @@
               "RelativeToolTip": "Scripts\\EnemyManager.cs",
               "ViewState": "AgIAABwAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:17:18.083Z"
             },
             {
               "$type": "Document",

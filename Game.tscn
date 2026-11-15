@@ -4,14 +4,20 @@
 [ext_resource type="Script" uid="uid://ijti3263jqpc" path="res://Scripts/BulletManager.cs" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://bwwr3lkpi0b8x" path="res://Objects/bullet.tscn" id="3_u44n3"]
 [ext_resource type="Script" uid="uid://ct6f6xhxqm2pk" path="res://Scripts/EnemyManager.cs" id="4_sb48q"]
-[ext_resource type="PackedScene" uid="uid://blso66kjqilbk" path="res://Objects/blue_level.tscn" id="5_joorw"]
 [ext_resource type="PackedScene" uid="uid://bt8urbblcipr4" path="res://Objects/Spider.tscn" id="5_t88pq"]
 [ext_resource type="PackedScene" uid="uid://c7vw55sbj6a2j" path="res://Objects/Sword.tscn" id="6_gwjdr"]
 [ext_resource type="PackedScene" uid="uid://dgy3dkuvpi4ym" path="res://Objects/Book.tscn" id="7_lvtmh"]
 [ext_resource type="PackedScene" uid="uid://hscddh7257um" path="res://Objects/Amulet.tscn" id="8_yyih5"]
+[ext_resource type="Script" uid="uid://d4cln4bf8pkdq" path="res://Scripts/BlueWall.cs" id="9_yhmtn"]
+[ext_resource type="Script" uid="uid://cm3igmwihjsi8" path="res://Scripts/BlueDoorTrigger.cs" id="10_gwjdr"]
+[ext_resource type="Script" uid="uid://duhnrshjgtvnr" path="res://Scripts/Door.cs" id="11_lvtmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 radius = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyih5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjyg3"]
 
 [node name="Node2D" type="Node2D" unique_id=1102391149]
 
@@ -37,4 +43,84 @@ amuletObject = ExtResource("8_yyih5")
 player = NodePath("../Player")
 bulletManager = NodePath("../BulletManager")
 
-[node name="BlueLevel" parent="." unique_id=861394135 instance=ExtResource("5_joorw")]
+[node name="Blue_Wall" type="CharacterBody2D" parent="." unique_id=821976894 groups=["Persist"]]
+position = Vector2(595, 0)
+scale = Vector2(1, 45)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("9_yhmtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall" unique_id=1128071642]
+shape = SubResource("RectangleShape2D_yyih5")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall2" type="CharacterBody2D" parent="." unique_id=1602789982 groups=["Persist"]]
+position = Vector2(-615, 0)
+scale = Vector2(1, 45)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("9_yhmtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall2" unique_id=1871851961]
+shape = SubResource("RectangleShape2D_yyih5")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall3" type="CharacterBody2D" parent="." unique_id=76097744 groups=["Persist"]]
+position = Vector2(0, 440)
+rotation = 1.5707964
+scale = Vector2(1, 60)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("9_yhmtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall3" unique_id=1929539421]
+shape = SubResource("RectangleShape2D_yyih5")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall4" type="CharacterBody2D" parent="." unique_id=1536902287 groups=["Persist"]]
+position = Vector2(-350, -460)
+rotation = 1.5707964
+scale = Vector2(1, 25)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("9_yhmtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall4" unique_id=1667472640]
+shape = SubResource("RectangleShape2D_yyih5")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Blue_Wall5" type="CharacterBody2D" parent="." unique_id=1058655967 groups=["Persist"]]
+position = Vector2(350, -460)
+rotation = 1.5707964
+scale = Vector2(1, 25)
+disable_mode = 1
+platform_on_leave = 2
+script = ExtResource("9_yhmtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_Wall5" unique_id=870111717]
+shape = SubResource("RectangleShape2D_yyih5")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Door_Trigger" type="Area2D" parent="." unique_id=1861397009 groups=["Persist"]]
+position = Vector2(0, -460)
+rotation = 1.5707964
+scale = Vector2(1, 10)
+collision_mask = 13
+script = ExtResource("10_gwjdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" unique_id=97338885]
+shape = SubResource("RectangleShape2D_qjyg3")
+debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
+
+[node name="Door" type="CharacterBody2D" parent="." unique_id=572582609 node_paths=PackedStringArray("enemyManager")]
+position = Vector2(0, -460)
+rotation = 1.5707964
+scale = Vector2(1, 10)
+script = ExtResource("11_lvtmh")
+enemyManager = NodePath("../EnemyManager")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1628015254]
+shape = SubResource("RectangleShape2D_qjyg3")
+debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
+
+[connection signal="body_entered" from="Door_Trigger" to="Door_Trigger" method="OnCollision"]
