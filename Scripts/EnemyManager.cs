@@ -55,17 +55,17 @@ public partial class EnemyManager : Node
 	public void CreateEnemy(string type, Vector2 position)
 	{
 		// Determine enemy type
-		Node newEnemy = null;
+		Node newEnemy;
 		switch (type)
 		{
 			case "Spider":
 				newEnemy = spiderObject.Instantiate();
                 AddChild(newEnemy);
-				enemies.Add(newEnemy as Spider);
+                enemies.Add(newEnemy as Spider);
+				
+				enemies[enemies.Count -1].Inst();
 
-				enemies[enemies.Count - 1].Inst();
-
-                enemies[enemies.Count - 1].Position = position;
+                enemies[enemies.Count -1].Position = position;
 				break;
 		}
 	}

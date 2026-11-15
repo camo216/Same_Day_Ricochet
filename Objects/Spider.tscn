@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b18q1gvl56uch" path="res://Scripts/Spider.cs" id="1_c1j0r"]
 
-[node name="Node2D" type="Node2D" unique_id=142149228]
+[sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
 
-[node name="Spider" type="CharacterBody2D" parent="." unique_id=93462824]
+[node name="Spider" type="CharacterBody2D" unique_id=93462824]
 script = ExtResource("1_c1j0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1639155732]
+shape = SubResource("CircleShape2D_s2kof")
