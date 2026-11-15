@@ -63,6 +63,13 @@ public partial class Bullet : Area2D
 				p.HandleBullets(this);
 			}
 		}
+		else if (collision is Enemy e)
+		{
+			if (isDeflected)
+			{
+				e.TakeDamage();
+			}
+		}
 	}
 
 	/// <summary>
