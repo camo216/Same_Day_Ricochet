@@ -1,10 +1,8 @@
 using Godot;
 using System;
-[Tool]
 
 public partial class MainMenu : Control
 {
-	private Rect2 rect = new Rect2(0, 0, 1200, 900);
 	private AudioStreamPlayer music;
 	private AudioStreamPlayer musicLoop;
 
@@ -25,14 +23,12 @@ public partial class MainMenu : Control
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
-	{
-	}
-
-	public override void _Draw()
-	{
-		DrawRect(rect, Color.Color8(0, 0, 0, 255));
-		base._Draw();
-	}
+    {
+        if (Input.IsActionPressed("confirm"))
+        {
+			LoadLevel();
+        }
+    }
 
 	public void LoadLevel()
 	{
