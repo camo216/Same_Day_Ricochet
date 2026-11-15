@@ -37,9 +37,9 @@ public partial class MainMenu : Control
 	public void LoadLevel()
 	{
 		var scene = GD.Load<PackedScene>("res://Game.tscn").Instantiate();
-		GetParent().AddChild(scene);
+        GetParent().AddChild(scene);
 
-		QueueFree();
+        QueueFree();
 	}
 
 	public void PlayLoop()
