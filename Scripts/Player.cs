@@ -7,7 +7,7 @@ public partial class Player : CharacterBody2D
     private Random rng = new Random();
 
     private Vector2 drawVector = new Vector2(0, 0);
-    private const int speed = 500;
+    private const int speed = 200;
     private AudioStreamPlayer deathSound;
     private AudioStreamPlayer hurtSound;
     private AudioStream[] hurtSounds;
