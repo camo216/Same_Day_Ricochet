@@ -67,7 +67,7 @@ public partial class Spider : Enemy
             case ActionState.Action1:
                 if (cooldownTimer <= Action1FirstShotCooldown && !Action1FirstShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(30), Action1BulletSpeed);
                     Action1FirstShotHasShot = true;
                 }
                 if (cooldownTimer <= Action1SecondShotCooldown && !Action1SecondShotHasShot)
@@ -77,7 +77,7 @@ public partial class Spider : Enemy
                 }
                 if (cooldownTimer <= Action1ThirdShotCooldown && !Action1ThirdShotHasShot)
                 {
-                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(0), Action1BulletSpeed);
+                    bulletManager.CreateBullet(BulletType.Web, this, BulletDirection(-30), Action1BulletSpeed);
                     Action1ThirdShotHasShot = true;
                 }
                 if (cooldownTimer <= 0)
