@@ -3,16 +3,17 @@ using System;
 
 public abstract partial class Enemy : CharacterBody2D
 {
-	protected int health;
+	[Export] protected int health;
 	protected Vector2 direction;
 	protected float speed;
 	protected Node2D player;
     protected BulletManager bulletManager;
+    protected Random rng = new Random();
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
-
+        
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,5 +39,13 @@ public abstract partial class Enemy : CharacterBody2D
 		direction = direction.Normalized();
 
         return direction;
+    }
+
+    /// <summary>
+    /// Has the enemy take damage when getting hit.
+    /// </summary>
+    public void TakeDamage()
+    {
+        health--;
     }
 }

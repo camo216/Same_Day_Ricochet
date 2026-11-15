@@ -27,6 +27,9 @@ public partial class Spider : Enemy
         manager = GetParent<EnemyManager>();
         bulletManager = bullet;
         player = newPlayer;
+        health = 1;
+        direction = new Vector2(rng.Next(-1,1), rng.Next(-1,1)).Normalized();
+        speed = 5;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +40,9 @@ public partial class Spider : Enemy
 
 	public override void Move(double delta)
 	{
+        direction += new Vector2((float)rng.NextDouble() * .2f - .1f, (float)rng.NextDouble() * .2f - .1f);
+        direction.Normalized();
+
         Velocity = direction.Normalized() * speed;
         MoveAndSlide();
     }

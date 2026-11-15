@@ -8,6 +8,7 @@ public partial class Bullet : Area2D
 	private BulletType type = BulletType.None;
 	private Enemy origin = null;
 	private BulletManager manager;
+	public Color color;
 
 
 	[Export] private Vector2 direction = new Vector2(0, 0);
@@ -63,6 +64,13 @@ public partial class Bullet : Area2D
 				p.HandleBullets(this);
 			}
 		}
+		else if (collision is Enemy e)
+		{
+			if (isDeflected)
+			{
+				e.TakeDamage();
+			}
+		}
 	}
 
 	/// <summary>
@@ -75,6 +83,16 @@ public partial class Bullet : Area2D
 
 	public override void _Draw()
 	{
+		switch (type){
+			case BulletType.Blue: color = Color.Color8(0, 0, 255, 255); 
+				return;
+			case BulletType.Green: color = Color.Color8(0, 255, 0, 255);
+				return;
+			case BulletType.Red: color = Color.Color8(255, 0, 0, 255);
+				return;
+			case BulletType.Web: color = Color.Color8(255, 255, 255, 255);
+				return;
+		}
 		if (origin == null)
 		{
 			GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
@@ -82,10 +100,20 @@ public partial class Bullet : Area2D
 		else if (origin.Name == "Spider")
 		{
 			DrawCircle(drawVector, 2, Color.Color8(255, 255, 255, 255));
+			DrawCircle(drawVector, 2, color);
 		}
 		else if (origin.Name == "Book")
 		{
 
+			DrawRect(new Rect2 (drawVector, 10, 10), color, false, 1);
+		}
+		else if (origin.Name == "Amulet")
+		{
+            DrawRect(new Rect2(drawVector, 10, 10), color, true);
+        }
+		else if (origin.Name == "Sword")
+		{
+			DrawArc(drawVector, 10, 0, 3, 10, color, 3);
 		}
 
 	}
