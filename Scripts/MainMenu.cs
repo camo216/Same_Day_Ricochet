@@ -19,7 +19,14 @@ public partial class MainMenu : Control
 	public override void _Draw()
 	{
 		DrawRect(rect, Color.Color8(0, 0, 0, 255));
-
 		base._Draw();
 	}
+
+	public void LoadLevel()
+	{
+		var scene = GD.Load<PackedScene>("res://Game.tscn").Instantiate();
+		GetParent().AddChild(scene);
+
+        QueueFree();
+    }
 }

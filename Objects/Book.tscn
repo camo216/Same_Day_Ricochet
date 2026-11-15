@@ -2,5 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bh4x6yxl7lr02" path="res://Scripts/Book.cs" id="1_hyjei"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2kof"]
+size = Vector2(26, 20)
+
 [node name="Book" type="CharacterBody2D" unique_id=923619093]
 script = ExtResource("1_hyjei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1986478102]
+shape = SubResource("RectangleShape2D_s2kof")
