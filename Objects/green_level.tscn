@@ -91,11 +91,12 @@ script = ExtResource("2_stjud")
 shape = SubResource("RectangleShape2D_v8bn7")
 debug_color = Color(0.6643741, 0.3691035, 9.62615e-08, 0)
 
-[node name="Door" type="CharacterBody2D" parent="." unique_id=2066700785]
+[node name="Door" type="CharacterBody2D" parent="." unique_id=2066700785 node_paths=PackedStringArray("enemyManager")]
 position = Vector2(0, -460)
 rotation = 1.5707964
 scale = Vector2(1, 10)
 script = ExtResource("3_v8bn7")
+enemyManager = NodePath("../EnemyManager")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1352525258]
 shape = SubResource("RectangleShape2D_stjud")
@@ -120,7 +121,7 @@ spiderObject = ExtResource("8_l85ec")
 swordObject = ExtResource("9_5m3r4")
 bookObject = ExtResource("10_66a74")
 amuletObject = ExtResource("11_5p1q1")
-player = NodePath("")
-bulletManager = NodePath("")
+player = NodePath("../Player")
+bulletManager = NodePath("../BulletManager")
 
 [connection signal="body_entered" from="Door_Trigger" to="Door_Trigger" method="OnCollision"]

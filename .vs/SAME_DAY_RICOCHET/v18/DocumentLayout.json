@@ -82,8 +82,7 @@
               "RelativeToolTip": "Scripts\\GreenDoorTrigger.cs",
               "ViewState": "AgIAABwAAAAAAAAAAADwvyYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T22:22:47.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T22:22:47.272Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "Scripts\\RedDoorTrigger.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAswCkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T22:20:28.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T22:20:28.198Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "Scripts\\Bullet.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:37:35.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:37:35.268Z"
             },
             {
               "$type": "Document",
@@ -119,7 +116,7 @@
               "RelativeDocumentMoniker": "Scripts\\Door.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Door.cs",
               "RelativeToolTip": "Scripts\\Door.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T21:19:25.198Z",
               "EditorCaption": ""
@@ -128,14 +125,13 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "BlueDoorTrigger.cs",
-              "DocumentMoniker": "C:\\SOURCES\\REPOS\\SAME_DAY_RICOCHET\\Scripts\\BlueDoorTrigger.cs",
+              "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\BlueDoorTrigger.cs",
               "RelativeDocumentMoniker": "Scripts\\BlueDoorTrigger.cs",
-              "ToolTip": "C:\\SOURCES\\REPOS\\SAME_DAY_RICOCHET\\Scripts\\BlueDoorTrigger.cs",
+              "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\BlueDoorTrigger.cs",
               "RelativeToolTip": "Scripts\\BlueDoorTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:19:16.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:19:16.046Z"
             },
             {
               "$type": "Document",
@@ -193,7 +189,7 @@
               "RelativeDocumentMoniker": "Scripts\\EnemyManager.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeToolTip": "Scripts\\EnemyManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T21:17:18.083Z",
               "EditorCaption": ""
@@ -220,8 +216,7 @@
               "RelativeToolTip": "Scripts\\Enums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:17:18.106Z"
             },
             {
               "$type": "Document",
@@ -233,8 +228,7 @@
               "RelativeToolTip": "Scripts\\Player.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAiwCcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:17:18.11Z"
             },
             {
               "$type": "Document",
@@ -244,10 +238,9 @@
               "RelativeDocumentMoniker": "Scripts\\Enemy.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Scripts\\Enemy.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwDUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwDUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T21:17:18.113Z"
             }
           ]
         }
