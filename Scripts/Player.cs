@@ -30,6 +30,7 @@ public partial class Player : CharacterBody2D
 
     private const int maxHealth = 5;
     [Export] private int health = maxHealth;
+    private bool dead = false;
 
 
     private void UpdateVelocity()
@@ -94,15 +95,16 @@ public partial class Player : CharacterBody2D
 
     public void TakeDamage()
     {
-        health -= 1;
-        if (health <= 0)
+        if (!dead)
         {
-            // fuckin die
-            if (deathSound.Playing == false)
+                health -= 1;
+            if (health <= 0)
             {
+                // fuckin die
+                dead = true;
+                deathSound.Finished += LoadMenu;
                 deathSound.Play();
             }
-
             hurtSound.Stream = hurtSounds[rng.Next(1, 5)];
             hurtSound.Play();
         }
@@ -114,6 +116,14 @@ public partial class Player : CharacterBody2D
         {
             health += 1;
         }
+    }
+
+    private void LoadMenu()
+    {
+        var scene = GD.Load<PackedScene>("res://menu.tscn").Instantiate();
+        GetParent().GetParent().AddChild(scene);
+
+        GetParent().QueueFree();
     }
 
     // Called when the node enters the scene tree for the first time.
@@ -133,54 +143,57 @@ public partial class Player : CharacterBody2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
     {
-        if (!onCooldown)
+        if (!dead)
         {
-            if (Input.IsActionJustPressed("parry_red"))
+            if (!onCooldown)
             {
-                parry = BulletType.Red;
-                onCooldown = true;
-                currentColor = Color.Color8(255, 0, 0, 90);
+                if (Input.IsActionJustPressed("parry_red"))
+                {
+                    parry = BulletType.Red;
+                    onCooldown = true;
+                    currentColor = Color.Color8(255, 0, 0, 90);
+                }
+
+                else if (Input.IsActionJustPressed("parry_green"))
+                {
+                    parry = BulletType.Green;
+                    onCooldown = true;
+                    currentColor = Color.Color8(0, 255, 0, 90);
+                }
+
+
+                else if (Input.IsActionJustPressed("parry_blue"))
+                {
+                    parry = BulletType.Blue;
+                    onCooldown = true;
+                    currentColor = Color.Color8(0, 0, 255, 90);
+                }
             }
 
-            else if (Input.IsActionJustPressed("parry_green"))
+            if (onCooldown)
             {
-                parry = BulletType.Green;
-                onCooldown = true;
-                currentColor = Color.Color8(0, 255, 0, 90);
+                UpdateCooldown(delta);
             }
 
-
-            else if (Input.IsActionJustPressed("parry_blue"))
+            // handles cooldown for being webbed.
+            if (isWebbed)
             {
-                parry = BulletType.Blue;
-                onCooldown = true;
-                currentColor = Color.Color8(0, 0, 255, 90);
+                UpdateWebCooldown(delta);
             }
-        }
 
-        if (onCooldown)
-        {
-            UpdateCooldown(delta);
-        }
-
-        // handles cooldown for being webbed.
-        if (isWebbed)
-        {
-            UpdateWebCooldown(delta);
-        }
-
-        UpdateVelocity();
-        MoveAndSlide();
-        // Calls a method to handle each collision that happened.
-        //for (int i = 0; i < GetSlideCollisionCount(); i++)
-        //{
-        //    var collision = GetSlideCollision(i);
-        //    HandleCollisions(collision);
-        //}
-        for (int i = 0; i < GetSlideCollisionCount(); i++)
-        {
-            var collision = GetSlideCollision(i);
-            HandleCollisions(collision);
+            UpdateVelocity();
+            MoveAndSlide();
+            // Calls a method to handle each collision that happened.
+            //for (int i = 0; i < GetSlideCollisionCount(); i++)
+            //{
+            //    var collision = GetSlideCollision(i);
+            //    HandleCollisions(collision);
+            //}
+            for (int i = 0; i < GetSlideCollisionCount(); i++)
+            {
+                var collision = GetSlideCollision(i);
+                HandleCollisions(collision);
+            }
         }
 
         QueueRedraw();
