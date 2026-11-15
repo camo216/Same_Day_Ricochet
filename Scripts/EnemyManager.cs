@@ -26,7 +26,9 @@ public partial class EnemyManager : Node
 	public override void _Ready()
 	{
 		CreateEnemy("Amulet", new Vector2(300, 0));
-	}
+        CreateEnemy("Sword", new Vector2(-300, 0));
+        CreateEnemy("Spider", new Vector2(0, 300));
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

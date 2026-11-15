@@ -17,7 +17,7 @@ public partial class Spider : Enemy
     private bool Action1SecondShotHasShot = false;
     private const float Action1ThirdShotCooldown = 0f;
     private bool Action1ThirdShotHasShot = false;
-    private float Action1BulletSpeed = 10;
+    private float Action1BulletSpeed = 75;
     private float cooldownTimer = WaitingCooldown;
 
     // Called when the node enters the scene tree for the first time.
@@ -29,7 +29,7 @@ public partial class Spider : Enemy
         player = newPlayer;
         health = 1;
         direction = new Vector2(rng.Next(-1,1), rng.Next(-1,1)).Normalized();
-        speed = 5;
+        speed = 20;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

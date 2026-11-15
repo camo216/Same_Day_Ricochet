@@ -30,9 +30,9 @@ public partial class Sword : Enemy
         type = "Sword";
         bulletManager = bullet;
         player = newPlayer;
-        health = 1;
+        health = 3;
         direction = new Vector2(rng.Next(-1, 1), rng.Next(-1, 1)).Normalized();
-        speed = 5;
+        speed = 15;
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.

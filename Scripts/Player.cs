@@ -218,6 +218,7 @@ public partial class Player : CharacterBody2D
         if (parry == bullet.Type)
         {
             bullet.isDeflected = true;
+            bullet.speed *= 2;
         }
 
         // Webs slow down the player

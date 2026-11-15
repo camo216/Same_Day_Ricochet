@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b18q1gvl56uch" path="res://Scripts/Spider.cs" id="1_c1j0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2kof"]
-radius = 5.0
+radius = 6.0
 
 [node name="Spider" type="CharacterBody2D" unique_id=93462824]
 collision_layer = 4
