@@ -9,7 +9,8 @@ public partial class Bullet : Area2D
 	private Enemy origin = null;
 	private BulletManager manager;
 
-	[Export] private Vector2 direction = new Vector2(0,0);
+
+    [Export] private Vector2 direction = new Vector2(0, 0);
 	[Export] private float speed = 0;
 
 	[Export] public bool isDeflected = false;
@@ -82,5 +83,10 @@ public partial class Bullet : Area2D
 		{
 			DrawCircle(drawVector, 2, Color.Color8(255, 255, 255, 255));
 		}
+		else if (origin.Name == "Book")
+		{
+
+		}
+
 	}
 }
