@@ -122,14 +122,14 @@ public partial class Player : CharacterBody2D
     {
         if (!onCooldown)
         {
-            if (Input.IsActionPressed("parry_red"))
+            if (Input.IsActionJustPressed("parry_red"))
             {
                 parry = BulletType.Red;
                 onCooldown = true;
                 currentColor = Color.Color8(255, 0, 0, 90);
             }
 
-            else if (Input.IsActionPressed("parry_green"))
+            else if (Input.IsActionJustPressed("parry_green"))
             {
                 parry = BulletType.Green;
                 onCooldown = true;
@@ -137,7 +137,7 @@ public partial class Player : CharacterBody2D
             }
 
 
-            else if (Input.IsActionPressed("parry_blue"))
+            else if (Input.IsActionJustPressed("parry_blue"))
             {
                 parry = BulletType.Blue;
                 onCooldown = true;
