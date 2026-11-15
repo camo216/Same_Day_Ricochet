@@ -18,17 +18,17 @@ public partial class EnemyManager : Node
 
 	// Bullet manager reference
 	[Export] private BulletManager bulletManager;
-
+	
 	// Properties
 	public int EnemyCount { get => enemies.Count; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		CreateEnemy("Amulet", new Vector2(300, 0));
-        CreateEnemy("Sword", new Vector2(-300, 0));
-        CreateEnemy("Spider", new Vector2(0, 300));
-    }
+		
+		CreateEnemy("Sword", new Vector2(300, 0));
+		CreateEnemy("Spider", new Vector2(300, 0));
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -58,10 +58,7 @@ public partial class EnemyManager : Node
 	{
 		for (int i = 0; i < enemies.Count; i++)
 		{
-			if (!enemies[i].isDying)
-			{
-				enemies[i].DoAction(delta);
-			}
+			enemies[i].DoAction(delta);
 		}
 	}
 
