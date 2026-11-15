@@ -36,6 +36,7 @@ public partial class Spider : Enemy
 	public override void _Process(double delta)
 	{
         QueueRedraw();
+        base._Process(delta);
     }
 
 	public override void Move(double delta)

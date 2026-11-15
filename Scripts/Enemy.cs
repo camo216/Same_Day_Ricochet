@@ -12,6 +12,8 @@ public abstract partial class Enemy : CharacterBody2D
     protected BulletManager bulletManager;
     protected Random rng = new Random();
     protected EnemyManager manager;
+    public bool isDying;
+    private float dyingTimer = 1f;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -22,6 +24,14 @@ public abstract partial class Enemy : CharacterBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+        if (isDying)
+        {
+            dyingTimer -= (float)delta;
+        }
+        if (dyingTimer <= 0)
+        {
+            manager.DestroyEnemy(this);
+        }
 	}
 
 	public abstract void Inst(Node2D newPlayer, BulletManager bullet);
@@ -52,7 +62,7 @@ public abstract partial class Enemy : CharacterBody2D
         health--;
         if (health <= 0)
         {
-            manager.DestroyEnemy(this);
+            isDying = true;
         }
     }
 }
