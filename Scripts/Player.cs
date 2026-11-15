@@ -4,10 +4,10 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
-	private Vector2 drawVector = new Vector2(0, 0);
-	private const int speed = 500;
+    private Vector2 drawVector = new Vector2(0, 0);
+    private const int speed = 500;
 
-	private bool onCooldown = false;
+    private bool onCooldown = false;
     private const double cooldownTime = 0.75;
     private const double parryTime = 0.5;
     private double cooldown = 1;
@@ -27,22 +27,22 @@ public partial class Player : CharacterBody2D
     [Export] private int health = maxHealth;
 
 
-	private void UpdateVelocity()
-	{
-		Velocity = Input.GetVector("left", "right", "up", "down") * speed;
+    private void UpdateVelocity()
+    {
+        Velocity = Input.GetVector("left", "right", "up", "down") * speed;
         if (isWebbed)
         {
-            Velocity = Velocity * .75f;
+            Velocity = Velocity * .25f;
         }
-	}
+    }
 
-	private void UpdateCooldown(double delta)
+    private void UpdateCooldown(double delta)
     {
-		cooldown -= delta;
+        cooldown -= delta;
         if (cooldown <= 0)
         {
-			cooldown = cooldownTime;
-			onCooldown = false;
+            cooldown = cooldownTime;
+            onCooldown = false;
         }
         else if (cooldown - parryTime <= 0)
         {
@@ -87,16 +87,16 @@ public partial class Player : CharacterBody2D
         }
     }
 
-    public void takeDamage() 
+    public void takeDamage()
     {
         health -= 1;
         if (health <= 0)
-        { 
+        {
             // fuckin die
         }
     }
 
-    public void heal() 
+    public void heal()
     {
         if (health < 5)
         {
@@ -104,43 +104,43 @@ public partial class Player : CharacterBody2D
         }
     }
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+    }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		if (!onCooldown)
-		{
-			if (Input.IsActionPressed("parry_red"))
-			{
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
+        if (!onCooldown)
+        {
+            if (Input.IsActionPressed("parry_red"))
+            {
                 parry = BulletType.Red;
-				onCooldown = true;
+                onCooldown = true;
                 currentColor = Color.Color8(255, 0, 0, 90);
-			}
+            }
 
-			else if (Input.IsActionPressed("parry_green"))
-			{
+            else if (Input.IsActionPressed("parry_green"))
+            {
                 parry = BulletType.Green;
                 onCooldown = true;
                 currentColor = Color.Color8(0, 255, 0, 90);
-			}
+            }
 
 
-			else if (Input.IsActionPressed("parry_blue"))
-			{
+            else if (Input.IsActionPressed("parry_blue"))
+            {
                 parry = BulletType.Blue;
                 onCooldown = true;
                 currentColor = Color.Color8(0, 0, 255, 90);
-			}
-		}
+            }
+        }
 
-		if (onCooldown)
-		{
-			UpdateCooldown(delta);
-		}
+        if (onCooldown)
+        {
+            UpdateCooldown(delta);
+        }
 
         // handles cooldown for being webbed.
         if (isWebbed)
@@ -148,56 +148,51 @@ public partial class Player : CharacterBody2D
             UpdateWebCooldown(delta);
         }
 
-		UpdateVelocity();
-		MoveAndSlide();
+        UpdateVelocity();
+        MoveAndSlide();
         // Calls a method to handle each collision that happened.
-        for (int i = 0; i < GetSlideCollisionCount(); i++)
-        {
-            var collision = GetSlideCollision(i);
-            HandleCollisions(collision);
-        }
+        //for (int i = 0; i < GetSlideCollisionCount(); i++)
+        //{
+        //    var collision = GetSlideCollision(i);
+        //    HandleCollisions(collision);
+        //}
 
         QueueRedraw();
-	}
+    }
 
     /// <summary>
     /// Handles all collisions with the player
     /// </summary>
     /// <param name="collision">Collision with player</param>
-    private void HandleCollisions(KinematicCollision2D collision)
+    public void HandleBullets(Bullet bullet)
     {
-        // Bullet collisions
-        if (collision.GetCollider() is Bullet bullet)
+        // Does the player's parry match the bullet's type?
+        if (parry == bullet.Type)
         {
-            
-            // Does the player's parry match the bullet's type?
-            if (parry == bullet.Type)
-            {
-                bullet.isDeflected = true;
-            }
+            bullet.isDeflected = true;
+        }
 
-            // Webs slow down the player
-            else if (bullet.Type == BulletType.Web)
-            {
-                isWebbed = true;
-                webTimer = webCooldown;
-                bullet.DestroySelf();
-            }
+        // Webs slow down the player
+        else if (bullet.Type == BulletType.Web)
+        {
+            isWebbed = true;
+            webTimer = webCooldown;
+            bullet.DestroySelf();
+        }
 
-            // Player takes damage if not parried.
-            else if (!bullet.isDeflected)
-            {
-                takeDamage();
-                bullet.DestroySelf();
-            }
+        // Player takes damage if not parried.
+        else if (!bullet.isDeflected)
+        {
+            takeDamage();
+            bullet.DestroySelf();
         }
     }
 
-	public override void _Draw()
-	{
-		// Your draw commands here.
-		
-		DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, false);
-		DrawCircle(drawVector, 20, currentColor, true);
-	}
+    public override void _Draw()
+    {
+        // Your draw commands here.
+
+        DrawArc(drawVector, 20, 0, 10, 100, Color.Color8(0, 255, 255, 255), 1, false);
+        DrawCircle(drawVector, 20, currentColor, true);
+    }
 }

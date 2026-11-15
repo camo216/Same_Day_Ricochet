@@ -6,7 +6,7 @@
 
 [node name="Spider" type="CharacterBody2D" unique_id=93462824]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_c1j0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1639155732]

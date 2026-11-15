@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public partial class Bullet : CharacterBody2D
+public partial class Bullet : Area2D
 {
-    // Variables
-    private Vector2 drawVector = new Vector2(0, 0);
-    private BulletType type = BulletType.None;
+	// Variables
+	private Vector2 drawVector = new Vector2(0, 0);
+	private BulletType type = BulletType.None;
 	private Enemy origin = null;
 	private BulletManager manager;
 
@@ -28,11 +28,11 @@ public partial class Bullet : CharacterBody2D
 	{
 		type = newType;
 		origin = creator;
-        manager = GetParent<BulletManager>();
+		manager = GetParent<BulletManager>();
 		direction = newDirection;
 		speed = newSpeed;
 		Position = new Vector2(origin.Transform.Origin.X, origin.Transform.Origin.Y);
-    }
+	}
 
 	/// <summary>
 	/// Moves the bullet along it's current velocity path.
@@ -43,13 +43,26 @@ public partial class Bullet : CharacterBody2D
 		// Determine direction and velocity.
 		if (isDeflected)
 		{
-            direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);  
-        }
-        Velocity = direction.Normalized() * speed;
-
+			direction = new Vector2(origin.Position.X - Transform.Origin.X, origin.Position.Y - Transform.Origin.Y);  
+		}
 		// Move the bullet.
-        MoveAndCollide(Velocity * (float)delta);
-    }
+		Position += direction.Normalized() * speed * (float)delta;
+	}
+
+	/// <summary>
+	/// Detects collisions with the bullet.
+	/// </summary>
+	/// <param name="collision">object being collided with.</param>
+	private void OnCollision(PhysicsBody2D collision)
+	{
+		if (collision is Player p)
+		{
+			if (!isDeflected)
+			{
+				p.HandleBullets(this);
+			}
+		}
+	}
 
 	/// <summary>
 	/// Calls the proper methods to destroy the bullet.
