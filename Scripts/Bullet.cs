@@ -60,7 +60,7 @@ public partial class Bullet : CharacterBody2D
 
 	public override void _Draw()
 	{
-		if (origin != null)
+		if (origin == null)
 		{
 			GD.Print("Something went wrong with bullets origin, could not find the enemy who fired");
 		}
