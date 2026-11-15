@@ -38,13 +38,13 @@ public partial class EnemyManager : Node
 	/// Attempts to have all enemies perform an action
 	/// </summary>
 	/// <param name="delta">delta time</param>
-	//private void EnemyAction(double delta)
-	//{
- //       for (int i = 0; i < enemies.Count; i++)
- //       {
- //           enemies[i].DoAction(delta);
- //       }
- //   }
+	private void EnemyAction(double delta)
+	{
+		for (int i = 0; i < enemies.Count; i++)
+		{
+			enemies[i].DoAction(delta);
+		}
+	}
 
 	/// <summary>
 	/// Handles the creation of Enemies
@@ -62,7 +62,9 @@ public partial class EnemyManager : Node
                 AddChild(newEnemy);
 				enemies.Add(newEnemy as Spider);
 
-				enemies[enemies.Count - 1].Position = position;
+				enemies[enemies.Count - 1].Inst();
+
+                enemies[enemies.Count - 1].Position = position;
 				break;
 		}
 	}

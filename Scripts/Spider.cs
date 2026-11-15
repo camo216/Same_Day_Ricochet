@@ -6,7 +6,7 @@ public partial class Spider : Enemy
     private EnemyManager manager;
 
     // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+    public override void Inst()
 	{
         manager = GetParent<EnemyManager>();
     }
@@ -20,5 +20,10 @@ public partial class Spider : Enemy
 	{
         Velocity = direction.Normalized() * speed;
         MoveAndSlide();
+    }
+
+    public override void DoAction(double delta)
+    {
+        
     }
 }
