@@ -35,6 +35,18 @@ public partial class EnemyManager : Node
     }
 
 	/// <summary>
+	/// Attempts to have all enemies perform an action
+	/// </summary>
+	/// <param name="delta">delta time</param>
+	//private void EnemyAction(double delta)
+	//{
+ //       for (int i = 0; i < enemies.Count; i++)
+ //       {
+ //           enemies[i].DoAction(delta);
+ //       }
+ //   }
+
+	/// <summary>
 	/// Handles the creation of Enemies
 	/// </summary>
 	/// <param name="type">Type of enemy</param>
