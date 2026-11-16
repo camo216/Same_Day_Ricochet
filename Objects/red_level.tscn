@@ -124,4 +124,13 @@ amuletObject = ExtResource("11_olpbm")
 player = NodePath("../Player")
 bulletManager = NodePath("../BulletManager")
 
+[node name="EnemyManager2" type="Node2D" parent="." unique_id=1299255154 node_paths=PackedStringArray("player", "bulletManager")]
+script = ExtResource("7_ios5w")
+spiderObject = ExtResource("8_3grki")
+swordObject = ExtResource("9_j8w6g")
+bookObject = ExtResource("10_yx7kp")
+amuletObject = ExtResource("11_olpbm")
+player = NodePath("../Player")
+bulletManager = NodePath("../BulletManager")
+
 [connection signal="body_entered" from="Door_Trigger" to="Door_Trigger" method="OnCollision"]

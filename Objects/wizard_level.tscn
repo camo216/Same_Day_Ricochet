@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cntbkhwnwy2rt" path="res://Scripts/RedWall.cs" id="2_y3b5k"]
 [ext_resource type="Script" uid="uid://bo7vqq64mns" path="res://Scripts/GreenWall.cs" id="3_kmaob"]
 [ext_resource type="Script" uid="uid://cebuxet7oyym1" path="res://Scripts/Player.cs" id="4_kmaob"]
+[ext_resource type="VideoStream" uid="uid://cpvrrmt36k281" path="res://Art/SDR_cutscene.ogv" id="6_sn38o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exje5"]
 
@@ -102,3 +103,12 @@ script = ExtResource("4_kmaob")
 shape = SubResource("CircleShape2D_db3s4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=915689445]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=267606648]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_sn38o")
+autoplay = true
