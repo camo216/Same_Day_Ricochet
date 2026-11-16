@@ -104,8 +104,9 @@ public partial class Player : CharacterBody2D
             {
                 // fuckin die
                 dead = true;
-                deathSound.Finished += LoadMenu;
                 deathSound.Play();
+                deathSound.Finished += LoadMenu;
+                
             }
             hurtSound.Stream = hurtSounds[rng.Next(1, 5)];
             hurtSound.Play();

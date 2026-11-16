@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Sources\\repos\\Same_Day_Ricochet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\greendoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +23,24 @@
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\reddoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\reddoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\bluedoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\bluedoortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +51,12 @@
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\spider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\amulet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\amulet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|c:\\sources\\repos\\same_day_ricochet\\scripts\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726A4D87-7904-42E1-B9A9-AB22AA399672}|Same_Day_Ricochet.csproj|solutionrelative:scripts\\bulletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,11 +82,12 @@
               "RelativeToolTip": "Scripts\\GreenDoorTrigger.cs",
               "ViewState": "AgIAABwAAAAAAAAAAADwvyYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T22:22:47.272Z"
+              "WhenOpened": "2026-11-15T22:22:47.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "RedDoorTrigger.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\RedDoorTrigger.cs",
               "RelativeDocumentMoniker": "Scripts\\RedDoorTrigger.cs",
@@ -98,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Scripts\\Bullet.cs",
@@ -110,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Scripts\\Door.cs",
@@ -123,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "BlueDoorTrigger.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\BlueDoorTrigger.cs",
               "RelativeDocumentMoniker": "Scripts\\BlueDoorTrigger.cs",
@@ -135,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Amulet.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Amulet.cs",
               "RelativeDocumentMoniker": "Scripts\\Amulet.cs",
@@ -147,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Book.cs",
               "RelativeDocumentMoniker": "Scripts\\Book.cs",
@@ -159,19 +160,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Sword.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Scripts\\Sword.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Sword.cs",
               "RelativeToolTip": "Scripts\\Sword.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAQwFIAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAxwFUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.076Z"
+              "WhenOpened": "2026-11-15T21:17:18.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Spider.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Spider.cs",
               "RelativeDocumentMoniker": "Scripts\\Spider.cs",
@@ -183,19 +185,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Scripts\\EnemyManager.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\EnemyManager.cs",
               "RelativeToolTip": "Scripts\\EnemyManager.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwCAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.083Z"
+              "WhenOpened": "2026-11-15T21:17:18.083Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "BulletManager.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\BulletManager.cs",
               "RelativeDocumentMoniker": "Scripts\\BulletManager.cs",
@@ -203,7 +206,8 @@
               "RelativeToolTip": "Scripts\\BulletManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.103Z"
+              "WhenOpened": "2026-11-15T21:17:18.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -213,25 +217,27 @@
               "RelativeDocumentMoniker": "Scripts\\Enums.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Enums.cs",
               "RelativeToolTip": "Scripts\\Enums.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.106Z"
+              "WhenOpened": "2026-11-15T21:17:18.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
               "ToolTip": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwCcAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T21:17:18.11Z"
+              "WhenOpened": "2026-11-15T21:17:18.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Sources\\repos\\Same_Day_Ricochet\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Scripts\\Enemy.cs",

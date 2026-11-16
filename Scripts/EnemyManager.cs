@@ -12,6 +12,7 @@ public partial class EnemyManager : Node
 
     // Enemy list
     private List<Enemy> enemies = new List<Enemy>();
+	
 
 	// Player reference
 	[Export] private Node2D player;
@@ -26,8 +27,10 @@ public partial class EnemyManager : Node
 	public override void _Ready()
 	{
 		
-		CreateEnemy("Sword", new Vector2(300, 0));
+		CreateEnemy("Sword", new Vector2(-300, 0));
 		CreateEnemy("Spider", new Vector2(300, 0));
+		CreateEnemy("Amulet", new Vector2(0, 300));
+		CreateEnemy("Amulet", new Vector2(0, -300));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
