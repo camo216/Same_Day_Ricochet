@@ -133,6 +133,7 @@ public partial class Player : CharacterBody2D
     {
         deathSound = new AudioStreamPlayer();
         deathSound.Stream = GD.Load<AudioStream>("res://Audio/death.mp3");
+        deathSound.VolumeLinear = 1.3f;
         AddChild(deathSound);
 
         hurtSounds = [GD.Load<AudioStream>("res://Audio/glass1.mp3"), GD.Load<AudioStream>("res://Audio/glass2.mp3"), GD.Load<AudioStream>("res://Audio/glass3.mp3"), 
