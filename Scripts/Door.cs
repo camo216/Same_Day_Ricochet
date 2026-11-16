@@ -31,7 +31,6 @@ public partial class Door : CharacterBody2D
 		if (cleared)
 		{
 			CollisionLayer = 2;
-			cleared = false;
             QueueRedraw();
         }
 	}
