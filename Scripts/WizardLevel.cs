@@ -11,7 +11,7 @@ public partial class WizardLevel : Node2D
     {
         music = new AudioStreamPlayer();
         music.Stream = GD.Load<AudioStream>("res://Audio/Music/sdr-boss-intro.mp3");
-        music.VolumeLinear = 0.3F;
+        music.VolumeLinear = 1.6F;
         music.Finished += LoopMusic;
         AddChild(music);
         music.Play();

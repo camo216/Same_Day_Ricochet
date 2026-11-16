@@ -14,7 +14,7 @@ public partial class GreenDoorTrigger : Area2D
     {
         levelMusic = new AudioStreamPlayer();
         levelMusic.Stream = GD.Load<AudioStream>("res://Audio/Music/sdr-fight.mp3");
-		levelMusic.VolumeLinear = 0.3F;
+		levelMusic.VolumeLinear = 1.2F;
         levelMusic.Finished += LoopMusic;
 		AddChild(levelMusic);
         levelMusic.Play();
